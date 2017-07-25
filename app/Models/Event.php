@@ -21,7 +21,6 @@ class Event extends Model
     protected $primaryKey = 'id';
     public $timestamps = true;
     protected $guarded = ['id'];
-    protected $fillable = ['title', 'content', 'photos', 'status'];
     // protected $hidden = [];
     // protected $dates = [];
     protected $translatable = ['content'];

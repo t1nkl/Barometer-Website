@@ -21,7 +21,6 @@ class Ticket extends Model
     protected $primaryKey = 'id';
     public $timestamps = true;
     protected $guarded = ['id'];
-    protected $fillable = ['type', 'price', 'options', 'premium_options', 'url'];
     protected $translatable = ['options', 'premium_options'];
     // protected $hidden = [];
     // protected $dates = [];

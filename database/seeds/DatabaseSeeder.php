@@ -64,5 +64,6 @@ class DatabaseSeeder extends Seeder
         ]);
         $this->call(EventTableSeeder::class);
         $this->call(DemoTableSeeder::class);
+        $this->call(TicketTableSeeder::class);
     }
 }

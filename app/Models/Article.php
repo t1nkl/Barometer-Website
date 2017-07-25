@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-use Backpack\CRUD\CrudTrait;
+use App\Traits\CustomCrudTrait;
 use Illuminate\Database\Eloquent\Model;
 use Cviebrock\EloquentSluggable\Sluggable;
 use Cviebrock\EloquentSluggable\SluggableScopeHelpers;
@@ -10,7 +10,7 @@ use Backpack\CRUD\ModelTraits\SpatieTranslatable\HasTranslations;
 
 class Article extends Model
 {
-    use CrudTrait;
+    use CustomCrudTrait;
     use Sluggable, SluggableScopeHelpers;
     use HasTranslations;
 
@@ -24,7 +24,6 @@ class Article extends Model
     protected $primaryKey = 'id';
     public $timestamps = true;
     protected $guarded = ['id'];
-    protected $fillable = ['slug', 'title', 'content', 'image', 'status', 'date', 'seo_title', 'seo_description', 'seo_keywords'];
     // protected $hidden = [];
     // protected $dates = [];
     protected $translatable = ['title', 'content', 'seo_title', 'seo_description', 'seo_keywords'];
@@ -105,7 +104,7 @@ class Article extends Model
         $destination_path = "BLOG_Gallery/".$this->getSlugOrTitleAttribute();
         $image_height = 670;
 
-        $this->uploadFileToDisk($value, $attribute_name, $disk, $destination_path, $image_height);
+        $this->uploadImageToDisk($value, $attribute_name, $disk, $destination_path, $image_height);
     }
 
 }

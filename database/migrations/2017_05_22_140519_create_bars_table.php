@@ -29,7 +29,6 @@ class CreateBarsTable extends Migration
             $table->string('inst')->nullable();
             $table->string('ytube')->nullable();
             $table->string('twit')->nullable();
-            $table->enum('status', ['PUBLISHED', 'NOT PUBLISHED'])->default('PUBLISHED');
             $table->timestamps();
         });
     }

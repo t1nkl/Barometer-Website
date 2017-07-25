@@ -24,7 +24,6 @@ class Speaker extends Model
     protected $primaryKey = 'id';
     public $timestamps = true;
     protected $guarded = ['id'];
-    protected $fillable = ['title', 'slug', 'image', 'descr', 'type', 'position', 'content', 'url', 'fb', 'inst', 'ytube', 'twit'];
     protected $translatable = ['title', 'descr', 'position', 'content'];
     // protected $hidden = [];
     // protected $dates = [];
@@ -117,7 +116,7 @@ class Speaker extends Model
             \Storage::disk($disk)->put($destination_path.'/'.$filename, $image->stream());
 
             // 3. Save the path to the database
-            $this->attributes[$attribute_name] = $disk.'/'.$destination_path.'/'.$filename;
+            $this->attributes[$attribute_name] = '/'.$disk.'/'.$destination_path.'/'.$filename;
         }
     }
 

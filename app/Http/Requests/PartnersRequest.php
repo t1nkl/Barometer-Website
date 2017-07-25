@@ -52,7 +52,6 @@ class PartnersRequest extends \Backpack\CRUD\app\Http\Requests\CrudRequest
         return [
             'title.required' => 'Поле название требуется.',
             'url.required' => 'Поле URL требуется.',
-            'image.required' => 'Поле изображение требуется.',
         ];
     }
 }

@@ -2,12 +2,12 @@
 
 namespace App\Models;
 
-use Backpack\CRUD\CrudTrait;
+use App\Traits\CustomCrudTrait;
 use Illuminate\Database\Eloquent\Model;
 
 class Partners extends Model
 {
-    use CrudTrait;
+    use CustomCrudTrait;
 
     /*
     |--------------------------------------------------------------------------
@@ -19,7 +19,6 @@ class Partners extends Model
     protected $primaryKey = 'id';
     public $timestamps = true;
     protected $guarded = ['id'];
-    protected $fillable = ['title', 'image', 'url'];
     // protected $hidden = [];
     // protected $dates = [];
 
@@ -60,7 +59,7 @@ class Partners extends Model
         $destination_path = "PARTNERS_Gallery";
         $image_width = 270;
 
-        $this->uploadFileToDisk($value, $attribute_name, $disk, $destination_path, $image_width);
+        $this->uploadImageToDisk($value, $attribute_name, $disk, $destination_path, $image_width);
     }
 
 }

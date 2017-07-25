@@ -57,7 +57,6 @@ class SpeakerRequest extends \Backpack\CRUD\app\Http\Requests\CrudRequest
             'descr.required' => 'Поле краткое описание требуется.',
             'content.required' => 'Поле полное описание требуется.',
             'position.required' => 'Поле должность требуется.',
-            'image.required' => 'Поле изображение требуется.',
         ];
     }
 }

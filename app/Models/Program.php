@@ -21,7 +21,6 @@ class Program extends Model
     protected $primaryKey = 'id';
     public $timestamps = true;
     protected $guarded = ['id'];
-    protected $fillable = ['speaker_id', 'scene_id', 'day', 'title', 'start_date', 'end_date', 'type', 'content'];
     // protected $hidden = [];
     // protected $dates = [];
     protected $translatable = ['content', 'title'];

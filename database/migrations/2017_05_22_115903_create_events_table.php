@@ -18,7 +18,6 @@ class CreateEventsTable extends Migration
             $table->text('title')->nullable();
             $table->text('content')->nullable();
             $table->text('photos')->nullable();
-            $table->enum('status', ['PUBLISHED', 'NOT PUBLISHED'])->default('PUBLISHED');
             $table->timestamps();
         });
     }

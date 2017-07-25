@@ -55,7 +55,6 @@ class BarRequest extends \Backpack\CRUD\app\Http\Requests\CrudRequest
             'title.required' => 'Поле название требуется.',
             'descr.required' => 'Поле текст серым цветом требуется.',
             'content.required' => 'Поле контент требуется.',
-            'image.required' => 'Поле изображение требуется.',
         ];
     }
 }

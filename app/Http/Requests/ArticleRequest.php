@@ -55,7 +55,6 @@ class ArticleRequest extends \Backpack\CRUD\app\Http\Requests\CrudRequest
             'title.required' => 'Поле название требуется.',
             'content.required' => 'Поле контент требуется.',
             'date.required' => 'Поле дата требуется.',
-            'image.required' => 'Поле изображение требуется.',
         ];
     }
 }

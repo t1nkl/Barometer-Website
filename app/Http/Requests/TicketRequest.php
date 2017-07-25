@@ -26,7 +26,6 @@ class TicketRequest extends \Backpack\CRUD\app\Http\Requests\CrudRequest
     {
         return [
             'price' => 'required|max:10',
-            'options' => 'required',
         ];
     }
 
@@ -51,7 +50,6 @@ class TicketRequest extends \Backpack\CRUD\app\Http\Requests\CrudRequest
     {
         return [
             'price.required' => 'Поле название требуется.',
-            'options.required' => 'Поле URL требуется.',
         ];
     }
 }

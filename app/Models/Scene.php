@@ -21,7 +21,6 @@ class Scene extends Model
     protected $primaryKey = 'id';
     public $timestamps = true;
     protected $guarded = ['id'];
-    protected $fillable = ['title'];
     // protected $hidden = [];
     // protected $dates = [];
     protected $translatable = ['title'];

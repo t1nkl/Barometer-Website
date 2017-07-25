@@ -24,7 +24,6 @@ class Bar extends Model
     protected $primaryKey = 'id';
     public $timestamps = true;
     protected $guarded = ['id'];
-    protected $fillable = ['slug', 'title', 'descr', 'content', 'image', 'status', 'url', 'fb', 'inst', 'ytube', 'twit'];
     // protected $hidden = [];
     // protected $dates = [];
     // protected $casts = [];
@@ -113,7 +112,7 @@ class Bar extends Model
             \Storage::disk($disk)->put($destination_path.'/'.$filename, $image->stream());
 
             // 3. Save the path to the database
-            $this->attributes[$attribute_name] = $disk.'/'.$destination_path.'/'.$filename;
+            $this->attributes[$attribute_name] = '/'.$disk.'/'.$destination_path.'/'.$filename;
         }
     }
 
