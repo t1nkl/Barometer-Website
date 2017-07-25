@@ -1,0 +1,305 @@
+.md-show {
+	visibility: visible;
+}
+.md-overlay {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	visibility: hidden;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	opacity: 0;
+	background: rgba(143,27,15,0.8);
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.md-show ~ .md-overlay {
+	opacity: 1;
+	visibility: visible;
+}
+/* Content styles */
+.md-content {
+	color: #000;
+	margin: 0 auto;
+}
+.md-content > div {
+	padding: 15px 40px 30px;
+	margin: 0;
+	font-weight: 300;
+	font-size: 1.15em;
+}
+.md-content > div ul {
+	padding: 0;
+}
+/* Individual modal styles with animations/transitions */
+.md-effect-1 .md-content {
+	-webkit-transform: scale(0.7);
+	-moz-transform: scale(0.7);
+	-ms-transform: scale(0.7);
+	transform: scale(0.7);
+	opacity: 0;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.md-show.md-effect-1 .md-content {
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-ms-transform: scale(1);
+	transform: scale(1);
+	opacity: 1;
+}
+.md-modal {
+    position: fixed;
+    top: 25%;
+    left: 25%;
+    width: 50%;
+    max-width: 100%;
+    min-width: 50%;
+    height: auto;
+    z-index: 2000;
+    visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: translateX(0%) translateY(-10%);
+    -moz-transform: translateX(0%) translateY(-10%);
+    -ms-transform: translateX(0%) translateY(-10%);
+    transform: translateX(0%) translateY(-10%);
+}
+.md-show {
+	visibility: visible;
+	-webkit-backface-visibility: visible;
+	-moz-backface-visibility: visible;
+	backface-visibility: visible;
+}
+.md-overlay {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	visibility: hidden;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	opacity: 0;
+	background: rgba(36,36,36,0.8);
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.md-show ~ .md-overlay {
+	opacity: 1;
+	visibility: visible;
+}
+/* Content styles */
+.md-content {
+	color: #000;
+	background-color: #fff;
+	position: relative;
+	border-radius: 0;
+	margin: 0 auto;
+}
+.md-content > div {
+	padding: 30px;
+	margin: 0;
+	font-weight: 300;
+	font-size: 1.15em;
+}
+.md-content > div ul li {
+	padding: 5px 0;
+}
+.md-content button {
+	display: block;
+	margin: 0 auto;
+	font-size: 0.8em;
+}
+.md-close {
+	position: fixed;
+	width: 100%;
+	height: 30px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	top: 0;
+}
+@media screen and (min-width:1025px) and (max-width:1440px){
+	.md-modal {
+		position: fixed;
+		top: 15%;
+		left: 12%;
+		width: 75%;
+	}
+}
+@media screen and (min-width:320px) and (max-width:1024px){
+	.md-modal {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 2000;
+		-webkit-transform: translateX(0%) translateY(0%);
+		-moz-transform: translateX(0%) translateY(0%);
+		-ms-transform: translateX(0%) translateY(0%);
+		transform: translateX(0%) translateY(0%);
+	}
+}
+@media screen and (min-width:768px) and (max-width:1024px){
+	.md-modal {
+		position: fixed;
+		top: 25%;
+		left: 12%;
+		width: 75%;
+	}
+}
+@media screen and (min-width:426px) and (max-width:767px){
+	.md-modal {
+		position: fixed;
+		top: 0%;
+		left: 0%;
+		width: 100%;
+		height: 100%;
+		z-index: 2000;
+		-webkit-transform: translateX(0%) translateY(0%);
+		-moz-transform: translateX(0%) translateY(0%);
+		-ms-transform: translateX(0%) translateY(0%);
+		transform: translateX(0%) translateY(0%);
+		background-color:#fff;
+	}
+}
+@media screen and (min-width:320px) and (max-width:425px){
+	.md-modal {
+		position: fixed;
+		top: 0%;
+		left: 0%;
+		width: 100%;
+		height: 100%;
+		z-index: 2000;
+		-webkit-transform: translateX(0%) translateY(0%);
+		-moz-transform: translateX(0%) translateY(0%);
+		-ms-transform: translateX(0%) translateY(0%);
+		transform: translateX(0%) translateY(0%);
+		background-color:#fff;
+	}
+}
+
+.buy-ticket-section-modal {
+	display: flex;
+	justify-content: center;
+}
+.buy-ticket-modal {
+	min-width: 420px;
+	max-width: 600px;
+	background-color:transparent;
+	padding:30px;
+}
+.buy-ticket-block {
+	background-color: #fff;
+	padding: 50px;
+}
+.form-buy-ticket {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+.form-name, .form-city, .form-phone, .form-mail, .form-company, .form-position{
+	margin:10px 0;
+	width: 100%;
+	border: none;
+	border-bottom: 1px solid #ccc;
+}
+.inputText:focus{
+	outline:none;
+}
+.inputText {
+	padding: 10px 0;
+	font-style: normal;
+	color: #000;
+	font-size: 16px;
+	font-weight: lighter;
+}
+.inputText::-webkit-input-placeholder {
+	font-style: italic;
+	color: #ccc;
+	font-size: 16px;
+	font-weight: lighter;
+	padding: 10px 0;
+}
+.inputText::-moz-placeholder {
+	font-style: italic;
+	color: #ccc;
+	font-size: 16px;
+	font-weight: lighter;
+	padding: 10px 0;
+}
+.inputText:-ms-input-placeholder {
+	font-style: italic;
+	color: #ccc;
+	font-size: 16px;
+	font-weight: lighter;
+	padding: 10px 0;
+}
+.inputText:-moz-placeholder {
+	font-style: italic;
+	color: #ccc;
+	font-size: 16px;
+	font-weight: lighter;
+	padding: 10px 0;
+}
+.inputText::-webkit-input-placeholder {
+	font-style: italic;
+	color: #ccc;
+	font-size: 16px;
+	font-weight: lighter;
+	padding: 10px 0;
+}
+.inputText::-moz-placeholder {
+	font-style: italic;
+	color: #ccc;
+	font-size: 16px;
+	font-weight: lighter;
+	padding: 10px 0;
+}
+.inputText:-ms-input-placeholder {
+	font-style: italic;
+	color: #ccc;
+	font-size: 16px;
+	font-weight: lighter;
+	padding: 10px 0;
+}
+.inputText:placeholder-shown {
+	font-style: italic;
+	color: #ccc;
+	font-size: 16px;
+	font-weight: lighter;
+	padding: 10px 0;
+}
+.form-buy-ticket > div {
+	margin:5px 0;
+}
+.buy-ticket-button-modal {
+	background-color: #121c5c;
+	border:1px solid #121c5c;
+	padding: 10px;
+	color: #fff;
+	width: 100%;
+	margin: 15px 15px 30px 15px !important;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.buy-ticket-button-modal:hover {
+	cursor:pointer;
+	background-color: #fff;
+	color: #121c5c;
+	border: 1px solid #121c5c;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.ticket-close > .md-close::after {
+	right: 30px;
+	top: 30px;
+}
