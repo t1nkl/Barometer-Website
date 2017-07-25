@@ -1,16 +1,21 @@
-# Backpack Admin Panel (upgraded by myself)
+# Barometer Website
 
-This is [BackPack](https://backpackforlaravel.com) Admin Panel for Laravel, that I use in my projects and update from time to time to make for myself best and universal admin panel for almost all projects. My bild based on:
+[![N|Solid](http://i.piccy.info/i9/72543b1c5a10c2f50ec5e0cd0f668247/1500981205/105814/1164691/165_227_142_161_8082_ru.jpg)](http://165.227.142.161:8082)
+
+This website made by me:) I used:
   - Laravel 5.4
-  - BackPack 3.1
-  - BackPack generators
-  - Barryvdh debugbar
-  - Consoletvs identify
-  - Intervention image
-  - Spatie translatable
+  - [My own BackPack bild](https://github.com/t1nkl/My-BackPack)
+  - Vue2.js
+  - axios
+  - Barryvdh
+  - Consoletvs
+  - Intervention
+  - Spatie
+
+### Link  -  [Barometer](http://165.227.142.161:8082)
 
 ### Todos
- - Upgrade multiupload ajax images (based on DropZone)
- - Fixed image upload when empty
- - Shift statistics and analitics to main page in admin panel
- - Add image resize option to image upload method
+
+ - Front-end fixes
+ - Minor fixes
+ - Upload multiimage fixes
