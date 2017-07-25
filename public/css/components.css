@@ -33,6 +33,13 @@
 .md-content > div ul {
 	padding: 0;
 }
+.watchvideo-modal > div {
+	padding: 15px 40px 30px;
+	margin: 0;
+	font-weight: 300;
+	font-size: 1.15em;
+	background-color: black;
+}
 /* Individual modal styles with animations/transitions */
 .md-effect-1 .md-content {
 	-webkit-transform: scale(0.7);
@@ -114,6 +121,7 @@
 	display: block;
 	margin: 0 auto;
 	font-size: 0.8em;
+	cursor: pointer;
 }
 .md-close {
 	position: fixed;
@@ -302,4 +310,5 @@
 .ticket-close > .md-close::after {
 	right: 30px;
 	top: 30px;
+	cursor: pointer;
 }

@@ -1226,7 +1226,7 @@ h1 {
 }
 .md-close::after {
    content:" ";
-   background-image:url('../img/close.svg');
+   background-image:url('../img/close_old.svg');
    background-size: 100%;
    background-repeat:no-repeat;
    background-position: center;

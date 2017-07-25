@@ -20,7 +20,7 @@
         <div class="col-md-12 blog-item-single">
             <a href="#" onclick="window.history.go(-1); return false;" class="return-back-link-blog"><img
                         src="/img/arrow-left.png" class="" alt=""> @lang('static.blog.back')</a>
-            <div class="blog-single-main-illustration" style="background-image:url('/uploads/{{$blogs->image}}');">
+            <div class="blog-single-main-illustration" style="background-image:url('{{$blogs->image}}');">
             </div>
             <div class="col-lg-8 col-md-12 blog-content-single">
                 <span class="tag-content-mob"><a href="#">Tag</a></span>

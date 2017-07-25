@@ -1,7 +1,7 @@
 <template>
     <div v-bind:class="[speaker.type == 'Premium' ? 'col-md-2 speakers-item premium-speaker' : '', 'col-md-2 speakers-item']">
         <a @click="showModal = true" href="#item" class="md-trigger">
-            <img :src="'/'+speaker.image" class="img-fluid speaker-img-bl">
+            <img :src="speaker.image" class="img-fluid speaker-img-bl">
             <h4 class="speaker-name">{{locale(speaker.title)}}</h4>
             <span class="cross-speaker"></span>
             <div class="speaker-info">
@@ -15,7 +15,7 @@
             <div class="md-content">
                 <div class="col-md-12 speaker-info-modal">
                     <div class="col-md-4 speaker-img-modal">
-                        <img :src="'/'+speaker.image" class="img-fluid">
+                        <img :src="speaker.image" class="img-fluid">
                     </div>
                     <div class="col-md-8 speaker-description-modal">
                         <h4 class="speaker-name-modal">{{locale(speaker.title)}}</h4>

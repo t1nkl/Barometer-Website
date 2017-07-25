@@ -62,19 +62,19 @@ class HomeController extends Controller
 
     public function speakersAjax( Request $request )
     {
-        if (Identify::device()->getName() == 'iPad' || Identify::device()->getName() == 'Android' || Identify::device()->getName() == 'iPhone' || Identify::device()->getName() == 'Windows Phone') {
-            return Speaker::orderBy("rgt")->with('programs')->paginate(6)->toArray()['data'];
-        } else {
+        if (Identify::os()->getName() == 'Windows' || Identify::os()->getName() == 'OS X' || Identify::os()->getName() == 'Linux') {
             return Speaker::orderBy("rgt")->with('programs')->paginate(10)->toArray()['data'];
+        } else {
+            return Speaker::orderBy("rgt")->with('programs')->paginate(6)->toArray()['data'];
         }
     }
 
     public function barsAjax( Request $request )
     {
-        if (Identify::device()->getName() == 'iPad' || Identify::device()->getName() == 'Android' || Identify::device()->getName() == 'iPhone' || Identify::device()->getName() == 'Windows Phone') {
-            return Bar::orderBy("rgt")->paginate(6)->toArray()['data'];
-        } else {
+        if (Identify::os()->getName() == 'Windows' || Identify::os()->getName() == 'OS X' || Identify::os()->getName() == 'Linux') {
             return Bar::orderBy("rgt")->paginate(10)->toArray()['data'];
+        } else {
+            return Bar::orderBy("rgt")->paginate(6)->toArray()['data'];
         }
     }
 

@@ -13,7 +13,7 @@
 		</div>
 		<div class="col-md-12 blog-grid">
 			@foreach($blogs as $blog)
-				<div class="col-md-5 col-xs-12 blog-items" style="background-image: url('/uploads/{{$blog->image}}')">
+				<div class="col-md-5 col-xs-12 blog-items" style="background-image: url('{{$blog->image}}')">
 					<a href="/{{$locale}}/blog/{{$blog->slug}}" class="blog-item-link">
 						<div class="blog-description">
 							<h4 class="blog-item-heading">{{$blog->title}}</h4>

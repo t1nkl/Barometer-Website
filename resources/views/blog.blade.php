@@ -55,7 +55,7 @@
                             @endforeach
                         </span>
                         <a href="/{{$locale}}/blog/{{$blog->slug}}">
-                            <img src="/uploads/{{$blog->image}}" class="blog-illustration-img" alt="">
+                            <img src="{{$blog->image}}" class="blog-illustration-img" alt="">
                         </a>
                     </div>
                     <div class="col-md-6 blog-text">

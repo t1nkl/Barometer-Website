@@ -11,13 +11,6 @@
 |
 */
 
-Route::get('/', 'HomeController@index');
-Route::get('/language/{lang}/', 'LanguageController@index');
-
-Route::get('blog', 'BlogController@index');
-Route::get('blog/{slug}', 'BlogController@show');
-
-
-
-Route::resource('contact', 'ContactController');
-Route::resource('members', 'MemberController');
+Route::get('speakers', 'HomeController@speakersAjax');
+Route::get('bars', 'HomeController@barsAjax');
+Route::get('partners', 'HomeController@partnersAjax');

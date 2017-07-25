@@ -1,7 +1,7 @@
 <template>
     <div class="col-md-2 partners-item">
         <a @click="showModal = false" :href="partner.url" rel="nofollow" class="" >
-            <img :src="'/uploads/'+partner.image" class="img-fluid partner-img-bl">
+            <img :src="partner.image" class="img-fluid partner-img-bl">
             <h4 class="speaker-name">{{locale(partner.title)}}</h4>
         </a>
 
@@ -9,7 +9,7 @@
             <div class="md-content">
                 <div class="col-md-12 speaker-info-modal">
                     <div class="col-md-4 speaker-img-modal">
-                        <img :src="'/uploads/'+partner.image" class="img-fluid" >
+                        <img :src="partner.image" class="img-fluid" >
                         <ul class="navbar-social-modal">
                             <li class="nav-item">
                                 <a class="nav-link-modal" href="#"><img src="img/facebook-g.svg" alt=""></a>

@@ -33,7 +33,6 @@
 @include('sections.bilety')
 
 @include('sections.programs')
-{{--@include('sections.programs_old')--}}
 
 @include('sections.contact')
 
