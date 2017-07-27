@@ -84,8 +84,6 @@
 		</script>
 		@else
 		@endif
-		<script type="text/javascript" src="{{ asset('js/classie.js') }}"></script>
-		<script type="text/javascript" src="{{ asset('js/modalEffects.js') }}"></script>
 		<script type="text/javascript" src="{{ asset('js/jquery.maskinput.js') }}"></script>
 		<!-- /*===== custom javascript =====*/ -->
 		<script type="text/javascript">
@@ -93,7 +91,6 @@
 			$(window).load(function() {
 				$(".loader").delay(100).fadeOut("slow");
 			});
-
             <!-- /*===== maskinput =====*/ -->
             $(function(e) {
                 e("#phone").mask("+99 (999) 999 99 99")
@@ -222,5 +219,7 @@
 			$( ".timetable section" ).css( "-webkit-overflow-scrolling", "touch" );
 		@endif
 		</script>
+		<script type="text/javascript" src="{{ asset('js/classie.js') }}"></script>
+		<script type="text/javascript" src="{{ asset('js/modalEffects.js') }}"></script>
 	</body>
 </html>

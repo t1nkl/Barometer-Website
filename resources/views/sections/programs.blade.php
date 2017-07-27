@@ -38,6 +38,7 @@
                     @endif
                 @endforeach
             </div>
+
         </div>
 
         @foreach($fest_days as $fest_date => $fest_day)
@@ -94,54 +95,6 @@
                 @endif
             @endforeach
         @endforeach
-
-
-        {{--<div class="md-modal md-effect-1" id="modal-2">--}}
-            {{--<div class="md-content program-modal">--}}
-                {{--<div class="col-md-12 program-info-modal">--}}
-                    {{--<div class="wrapping-label">--}}
-                        {{--<p class="premium-program-modal">PREMIUM</p>--}}
-                    {{--</div>--}}
-                    {{--<div class="col-md-12"><h4 class="program-heading-modal">Step by step: Образование для бармена</h4></div>--}}
-                    {{--<div class="col-md-1 program-translate-modal">--}}
-                        {{--<p class="program-time-modal">14.30 - 16.30</p>--}}
-                    {{--</div>--}}
-                    {{--<div class="col-md-7 program-description-modal">--}}
-                        {{--<p>Алекс Кратена - настоящая звезда мировой барной индустрии. До ноября 2015 года он руководиллондонским баром Artesian, который четыре года подряд возглавлял рейтинг «50 лучших баров мира».Согласитесь, результат впечатляющий! Для BAROMETER Алекс подготовил лекцию, как превратить своё дело в бренд,который будет востребован в современном мире. Для владельцев и руководителей баров, бар-менеджеров и тех,кто стремится ими стать, − must visit!</p>--}}
-                    {{--</div>--}}
-                    {{--<div class="col-md-1 program-translate-modal">--}}
-                        {{--<p class="program-modal-speaker">SPEAKER</p>--}}
-                    {{--</div>--}}
-                    {{--<div class="col-md-3 program-img-modal"><img src="/img/Alex-Kratena-1.png" class="img-fluid program-modal-img">--}}
-                        {{--<h4 class="program-name-modal">Алекс Кратена</h4><span class="position-modal">Position</span></div>--}}
-                    {{--<button class="md-close"></button>--}}
-                {{--</div>--}}
-            {{--</div>--}}
-        {{--</div>--}}
-        {{--<div class="md-overlay"></div>--}}
-
-        {{--<div class="md-modal md-effect-1" id="modal-3">--}}
-            {{--<div class="md-content program-modal">--}}
-                {{--<div class="col-md-12 program-normal-modal">--}}
-                    {{--<div class="wrapping-label-normal">--}}
-                    {{--</div>--}}
-                    {{--<div class="col-md-12"><h4 class="program-heading-modal">Step by step: Образование для бармена</h4></div>--}}
-                    {{--<div class="col-md-1 program-translate-modal">--}}
-                        {{--<p class="program-time-modal">14.30 - 16.30</p>--}}
-                    {{--</div>--}}
-                    {{--<div class="col-md-7 program-description-modal">--}}
-                        {{--<p>Алекс Кратена - настоящая звезда мировой барной индустрии. До ноября 2015 года он руководиллондонским баром Artesian, который четыре года подряд возглавлял рейтинг «50 лучших баров мира».Согласитесь, результат впечатляющий! Для BAROMETER Алекс подготовил лекцию, как превратить своё дело в бренд,который будет востребован в современном мире. Для владельцев и руководителей баров, бар-менеджеров и тех,кто стремится ими стать, − must visit!</p>--}}
-                    {{--</div>--}}
-                    {{--<div class="col-md-1 program-translate-modal">--}}
-                        {{--<p class="program-modal-speaker">SPEAKER</p>--}}
-                    {{--</div>--}}
-                    {{--<div class="col-md-3 program-img-modal"><img src="/img/Alex-Kratena-1.png" class="img-fluid program-modal-img">--}}
-                        {{--<h4 class="program-name-modal">Алекс Кратена</h4><span class="position-modal">Position</span></div>--}}
-                    {{--<button class="md-close"></button>--}}
-                {{--</div>--}}
-            {{--</div>--}}
-        {{--</div>--}}
-        {{--<div class="md-overlay"></div>--}}
 
     </div>
     <a href="#" class="buybutton md-trigger" data-modal="modal-buy-ticket">

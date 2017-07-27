@@ -1,23 +1,17 @@
-/**
- * modalEffects.js v1.0.0
- * http://www.codrops.com
- *
- * Licensed under the MIT license.
- * http://www.opensource.org/licenses/mit-license.php
- * 
- * Copyright 2013, Codrops
- * http://www.codrops.com
- */
 var ModalEffects = (function() {
 
-	function init(event) {
+	'use strict';
 
-		event.preventDefault();
+	function init() {
+
+		'use strict';
 
 		var overlay = document.querySelector( '.md-overlay' );
 
 		[].slice.call( document.querySelectorAll( '.md-trigger' ) ).forEach( function( el, i ) {
 
+			// console.log(el.getAttribute( 'data-modal' ));
+			
 			var modal = document.querySelector( '#' + el.getAttribute( 'data-modal' ) ),
 				close = modal.querySelector( '.md-close' );
 
