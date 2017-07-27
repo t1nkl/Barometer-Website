@@ -38,10 +38,7 @@
                     @endif
                 @endforeach
             </div>
-
         </div>
-
-
 
         @foreach($fest_days as $fest_date => $fest_day)
             @foreach($programs as $program)

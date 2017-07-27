@@ -15,26 +15,7 @@
 		</button>
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav mr-auto">
-                @if (Identify::device()->getName() == 'iPad' || Identify::device()->getName() == 'Android' || Identify::device()->getName() == 'iPhone' || Identify::device()->getName() == 'Windows Phone')
-                    <li class="nav-item">
-                        <a class="nav-link main-menu" href="#section1">@lang('static.header.navbar.about')</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link main-menu" href="#section2">@lang('static.header.navbar.speakers')</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link main-menu" href="#section3">@lang('static.header.navbar.bars')</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link main-menu" href="/{{$locale}}/blog">@lang('static.header.navbar.blog')</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link main-menu" href="#section6">@lang('static.header.navbar.organisation')</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link main-menu" href="#section10">@lang('static.header.navbar.contact')</a>
-                    </li>
-                @else
+                @if (Identify::os()->getName() == 'Windows' || Identify::os()->getName() == 'OS X' || Identify::os()->getName() == 'Linux')
                     <li class="nav-item">
                         <a data-menuanchor="О-мероприятии" class="nav-link main-menu" href="#О-мероприятии">@lang('static.header.navbar.about')</a>
                     </li>
@@ -53,8 +34,26 @@
                     <li class="nav-item">
                         <a data-menuanchor="Контакты" class="nav-link main-menu" href="#Контакты">@lang('static.header.navbar.contact')</a>
                     </li>
+                @else
+                    <li class="nav-item">
+                        <a class="nav-link main-menu" href="#section1">@lang('static.header.navbar.about')</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link main-menu" href="#section2">@lang('static.header.navbar.speakers')</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link main-menu" href="#section3">@lang('static.header.navbar.bars')</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link main-menu" href="/{{$locale}}/blog">@lang('static.header.navbar.blog')</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link main-menu" href="#section6">@lang('static.header.navbar.organisation')</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link main-menu" href="#section10">@lang('static.header.navbar.contact')</a>
+                    </li>
                 @endif
-
 				<li class="nav-lang">
 					@if(url()->current() == url('/').'/ru' || url()->current() == url('/').'/en')
 						@if($locale == 'ru')
@@ -99,4 +98,3 @@
 		</div>
 	</div>
 </div>
-

@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use Identify;
 use Jenssegers\Date\Date;
 use Illuminate\Http\Request;
-
 use App\Models\{Setting, Event, Speaker, Bar, Article, Mainpartners, Partners, Ticket, Program, Scene, VisitorId, VisitorIp};
 
 class HomeController extends Controller
@@ -32,9 +31,7 @@ class HomeController extends Controller
         } else {
             VisitorId::addVisitorId(session()->getId(), null);
         }
-
         VisitorIp::addVisitorIp($request->ip());
-
         $url_array = array_slice(explode("/",url()->current()),3);
         $lang = $url_array[0];
         if(!empty($lang) && array_key_exists($lang, \Config::get('app.locales'))) {
@@ -42,7 +39,6 @@ class HomeController extends Controller
         } else {
             Date::setLocale('ru');
         }
-
         $browser = Identify::browser()->getName();
         $settings = Setting::first();
         $event = Event::first();
@@ -80,16 +76,11 @@ class HomeController extends Controller
 
     public function partnersAjax( Request $request )
     {
-        if (Identify::device()->getName() == 'iPad' || Identify::device()->getName() == 'Android' || Identify::device()->getName() == 'iPhone' || Identify::device()->getName() == 'Windows Phone') {
-            return Partners::paginate(12)->toArray()['data'];
-        } else {
+        if (Identify::os()->getName() == 'Windows' || Identify::os()->getName() == 'OS X' || Identify::os()->getName() == 'Linux') {
             return Partners::paginate(36)->toArray()['data'];
+        } else {
+            return Partners::paginate(12)->toArray()['data'];
         }
-    }
-
-    public function getModal( Request $request )
-    {
-        //
     }
 
 }

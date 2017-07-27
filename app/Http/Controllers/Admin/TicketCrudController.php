@@ -74,7 +74,6 @@ class TicketCrudController extends CrudController
                             ]);
 
         $this->crud->denyAccess(['create', 'delete']);
-
         $this->crud->enableAjaxTable();
         
     }

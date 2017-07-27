@@ -45,7 +45,7 @@ class CreateSettingsTable extends Migration
 
             $table->text('location_content')->nullable();
             $table->string('location_url')->nullable();
-            $table->text('location_photos')->nullable();
+            $table->text('location_image')->nullable();
             
             $table->timestamps();
             $table->softDeletes();

@@ -20,7 +20,6 @@ CRUD::resource('category', 'CategoryCrudController');
 CRUD::resource('tag', 'TagCrudController');
 
 CRUD::resource('settings', 'SettingCrudController');
-Route::post('settings-dropzone', ['uses' => 'SettingCrudController@handleDropzoneUpload']);
 
 CRUD::resource('bars', 'BarCrudController');
 CRUD::resource('tickets', 'TicketCrudController');

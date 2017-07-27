@@ -10,7 +10,9 @@
  */
 var ModalEffects = (function() {
 
-	function init() {
+	function init(event) {
+
+		event.preventDefault();
 
 		var overlay = document.querySelector( '.md-overlay' );
 

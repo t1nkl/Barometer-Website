@@ -22,7 +22,7 @@ return [
     'developer_name' => 'LeoDigital',
 
     // Developer website. Link in footer.
-    'developer_link' => 'http://tabacitu.ro',
+    'developer_link' => 'https://leodigital.com.ua',
 
     // Show powered by Laravel Backpack in the footer?
     'show_powered_by' => false,

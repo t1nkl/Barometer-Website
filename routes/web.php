@@ -16,8 +16,3 @@ Route::get('/language/{lang}/', 'LanguageController@index');
 
 Route::get('blog', 'BlogController@index');
 Route::get('blog/{slug}', 'BlogController@show');
-
-
-
-Route::resource('contact', 'ContactController');
-Route::resource('members', 'MemberController');

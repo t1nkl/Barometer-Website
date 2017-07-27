@@ -39,7 +39,7 @@
 			</div>
 		</div>
 		<div class="col-md-6 contact-illustration">
-			<img src="/img/bluecity.jpg" class="img-fluid" alt="">
+			<img src="{{$settings->location_image}}" class="img-fluid" alt="">
 		</div>
 	</div>
 	<a href="#" class="buybutton md-trigger" data-modal="modal-buy-ticket">

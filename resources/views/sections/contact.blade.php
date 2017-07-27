@@ -7,18 +7,18 @@
 			<ul class="navbar-social-contact">
 				<li class="nav-item">
 				    <a class="nav-link-soc-contact" href="{{$settings->facebook}}" target="_blank">
-							<img src="/img/facebook-w.svg" alt="">
-						</a>
+						<img src="/img/facebook-w.svg" alt="">
+					</a>
 				</li>
 				<li class="nav-item">
 				    <a class="nav-link-soc-contact" href="{{$settings->instagram}}" target="_blank">
-							<img src="/img/instagram-w.svg" alt="">
-						</a>
+						<img src="/img/instagram-w.svg" alt="">
+					</a>
 				</li>
 				<li class="nav-item">
 				    <a class="nav-link-soc-contact" href="{{$settings->youtube}}" target="_blank">
-							<img src="/img/youtube-w.svg" alt="">
-						</a>
+						<img src="/img/youtube-w.svg" alt="">
+					</a>
 				</li>
 			</ul>
 		</div>
@@ -48,7 +48,6 @@
 				</div>
 			</div>
 		</div>
-
 		<div class="col-md-12 contact-navigation">
 			<ul class="navbar-nav footer-last-contact">
 				<li class="nav-item active">
@@ -68,9 +67,7 @@
 				</li>
 			</ul>
 		</div>
-
 	</div>
-
 	<a href="#" class="buybutton md-trigger" data-modal="modal-buy-ticket">
 		<div class="circle-pop"></div>
 		<span class="bilettext">@lang('static.header.buy_ticket')</span>

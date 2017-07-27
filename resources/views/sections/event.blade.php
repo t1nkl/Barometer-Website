@@ -15,7 +15,7 @@
 			<div class="events-illustrations">
 		@if($event->photos)
 			@foreach($event->photos as $photos)
-				<img src="/uploads/{{$photos}}" class="img-fluid events-img" alt="">
+				<img src="{{$photos}}" class="img-fluid events-img" alt="">
 			@endforeach
 		@endif
 			</div>

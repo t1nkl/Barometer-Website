@@ -49,7 +49,6 @@ class EventCrudController extends CrudController
                             ]);
 
         $this->crud->denyAccess(['create', 'delete']);
-
         $this->crud->enableAjaxTable();
 
     }
@@ -79,7 +78,7 @@ class EventCrudController extends CrudController
             });
             $filename = md5($file->getClientOriginalName().time()).'.png';
             \Storage::disk($disk)->put($destination_path.'/'.$filename, $image->stream());
-            return response()->json(['success' => true, 'filename' => $destination_path . '/' . $filename]);
+            return response()->json(['success' => true, 'filename' => '/'.$disk.'/'.$destination_path.'/'.$filename]);
         }
         catch (\Exception $e)
         {

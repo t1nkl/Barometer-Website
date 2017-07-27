@@ -10,15 +10,13 @@
 		<meta name="author" content="Kyrylo" />
 		<meta name="copyright" content="Handcrafted by Kyrylo Kovalenko" />
 		<meta name="Resource-type" content="Document" />
-
 		<meta name="csrf-token" content="{{ csrf_token() }}">
-
-		<link href="/css/jquery.fullpage.css" rel="stylesheet" type="text/css" />
-		<link href="/css/bootstrap.css" rel="stylesheet" type="text/css" />
-		<link href="/css/style.css" rel="stylesheet" type="text/css" />
-		<link href="/css/components.css" rel="stylesheet" type="text/css" />
-		<link href="/packages/timetable/timetablejs.css" rel="stylesheet" type="text/css" />
-		<link href="/packages/timetable/demo.css" rel="stylesheet" type="text/css" />
+		<link href="{{ asset('css/jquery.fullpage.css') }}" rel="stylesheet" type="text/css" />
+		<link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet" type="text/css" />
+		<link href="{{ asset('css/style.css') }}" rel="stylesheet" type="text/css" />
+		<link href="{{ asset('css/components.css') }}" rel="stylesheet" type="text/css" />
+		<link href="{{ asset('packages/timetable/timetablejs.css') }}" rel="stylesheet" type="text/css" />
+		<link href="{{ asset('packages/timetable/demo.css') }}" rel="stylesheet" type="text/css" />
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
 	</head>
 	<body>
@@ -51,19 +49,18 @@
 
 		</div>
 		<!-- /*===== javascript =====*/ -->
-		<script type="text/javascript" src="/js/app.js"></script>
-		<script type="text/javascript" src="/js/jquery-3.2.1.js"></script>
-		<script type="text/javascript" src="/js/jquery-1.9.1.min.js"></script>
-		<script type="text/javascript" src="/js/jquery-ui.min.js"></script>
-		<script type="text/javascript" src="/js/tether.min.js"></script>
-		<script type="text/javascript" src="/js/bootstrap.js"></script>
-		<script type="text/javascript" src="/js/scrolloverflow.js"></script>
-		<script type="text/javascript" src="/packages/timetable/timetable.min.js"></script>
-		{{--<script type="text/javascript" src="/js/jquery.lazyload.js"></script>--}}
-		@if (Identify::device()->getName() == 'iPad' || Identify::device()->getName() == 'Android' || Identify::device()->getName() == 'iPhone' || Identify::device()->getName() == 'Windows Phone')
-		@else
+		<script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
+		<script type="text/javascript" src="{{ asset('js/jquery-3.2.1.js') }}"></script>
+		<script type="text/javascript" src="{{ asset('js/jquery-1.9.1.min.js') }}"></script>
+		<script type="text/javascript" src="{{ asset('js/jquery-ui.min.js') }}"></script>
+		<script type="text/javascript" src="{{ asset('js/tether.min.js') }}"></script>
+		<script type="text/javascript" src="{{ asset('js/bootstrap.js') }}"></script>
+		<script type="text/javascript" src="{{ asset('js/scrolloverflow.js') }}"></script>
+		<script type="text/javascript" src="{{ asset('packages/timetable/timetable.min.js') }}"></script>
+		<!-- <script type="text/javascript" src="{{ asset('js/jquery.lazyload.js') }}"></script> -->
+		@if (Identify::os()->getName() == 'Windows' || Identify::os()->getName() == 'OS X' || Identify::os()->getName() == 'Linux')
 		<!-- /*===== fullpage scroll =====*/ -->
-		<script type="text/javascript" src="/js/jquery.fullpage.js"></script>
+		<script type="text/javascript" src="{{ asset('js/jquery.fullpage.js') }}"></script>
 		<script type="text/javascript">
 			$(document).ready(function() {
 				$('#fullpage').fullpage({
@@ -85,8 +82,11 @@
 				});
 			});
 		</script>
+		@else
 		@endif
-		<script type="text/javascript" src="/js/jquery.maskinput.js"></script>
+		<script type="text/javascript" src="{{ asset('js/classie.js') }}"></script>
+		<script type="text/javascript" src="{{ asset('js/modalEffects.js') }}"></script>
+		<script type="text/javascript" src="{{ asset('js/jquery.maskinput.js') }}"></script>
 		<!-- /*===== custom javascript =====*/ -->
 		<script type="text/javascript">
             <!-- /*===== preloader =====*/ -->
@@ -215,14 +215,12 @@
                 @endforeach
             });
 
-		@if (Identify::device()->getName() == 'iPad' || Identify::device()->getName() == 'Android' || Identify::device()->getName() == 'iPhone' || Identify::device()->getName() == 'Windows Phone')
+		@if (Identify::os()->getName() == 'Windows' || Identify::os()->getName() == 'OS X' || Identify::os()->getName() == 'Linux')
+		@else
             <!-- /*===== timetable overflow =====*/ -->
 			$( ".timetable section" ).css( "overflow-x", "scroll" );
 			$( ".timetable section" ).css( "-webkit-overflow-scrolling", "touch" );
 		@endif
-
 		</script>
-		<script type="text/javascript" src="/js/classie.js"></script>
-		<script type="text/javascript" src="/js/modalEffects.js"></script>
 	</body>
 </html>

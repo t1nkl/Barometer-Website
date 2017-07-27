@@ -14,3 +14,6 @@
 Route::get('speakers', 'HomeController@speakersAjax');
 Route::get('bars', 'HomeController@barsAjax');
 Route::get('partners', 'HomeController@partnersAjax');
+
+Route::resource('contact', 'ContactController');
+Route::resource('members', 'MemberController');

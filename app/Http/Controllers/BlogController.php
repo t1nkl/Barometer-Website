@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Http\Requests;
 use Illuminate\Http\Request;
 use Illuminate\Routing\UrlGenerator;
-
 use App\Models\{Article, Tag, Setting};
 
 class BlogController extends Controller
@@ -23,6 +22,7 @@ class BlogController extends Controller
                 $blogs = $tag->articles;
                 $tags = Tag::all();
                 $settings = Setting::first();
+
                 return view('blog', compact('blogs', 'tags', 'tag', 'settings'));
             } else {
                 abort(404);
@@ -31,6 +31,7 @@ class BlogController extends Controller
             $blogs = Article::orderBy("rgt")->get();
             $tags = Tag::all();
             $settings = Setting::first();
+
             return view('blog', compact('blogs', 'tags', 'settings'));
         }
     }
@@ -67,6 +68,7 @@ class BlogController extends Controller
         $blogs = Article::where('slug', $slug)->first();
         if($blogs) {
             $settings = Setting::first();
+            
             return view('blog_single', compact('blogs', 'settings'));
         } else {
             abort(404);

@@ -19,8 +19,8 @@ class CreateProgramsTable extends Migration
             $table->integer('scene_id')->unsigned();
             $table->string('day')->nullable();
             $table->text('title')->nullable();
-            $table->dateTime('start_date')->nullable();
-            $table->dateTime('end_date')->nullable();
+            $table->time('start_date')->nullable();
+            $table->time('end_date')->nullable();
             $table->enum('type', ['Standart', 'Premium'])->default('Standart');
             $table->text('content')->nullable();
             $table->timestamps();
