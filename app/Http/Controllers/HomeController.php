@@ -46,7 +46,7 @@ class HomeController extends Controller
         $bars = Bar::orderBy("rgt")->paginate(10);
         $blogs = Article::orderBy("rgt")->limit(2)->get();
         $mainpartners = Mainpartners::limit(3)->get();
-        $partners = Partners::paginate(36);
+        $partners = Partners::paginate(18);
         $tickets = Ticket::all();
         $programs = Program::all();
         $scenes = Scene::all();
@@ -77,9 +77,9 @@ class HomeController extends Controller
     public function partnersAjax( Request $request )
     {
         if (Identify::os()->getName() == 'Windows' || Identify::os()->getName() == 'OS X' || Identify::os()->getName() == 'Linux') {
-            return Partners::paginate(36)->toArray()['data'];
+            return Partners::paginate(18)->toArray()['data'];
         } else {
-            return Partners::paginate(12)->toArray()['data'];
+            return Partners::paginate(9)->toArray()['data'];
         }
     }
 

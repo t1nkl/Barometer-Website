@@ -284,31 +284,31 @@ h1 {
 }
 .buy-ticket {
   width: 288px;
-	height: 79px;
-	margin-top:8rem;
-	background: #121c5c;
-	border:none;
-	color:#fff;
-	text-transform: uppercase;
-	font-weight: bold;
-	box-shadow: 10px 6px 0 0 #e08776;
+  height: 79px;
+  margin-top:8rem;
+  background: #121c5c;
+  border:none;
+  color:#fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  box-shadow: 10px 6px 0 0 #e08776;
    -o-transition: all ease-in-out 200ms;
    -moz-transition: all ease-in-out 200ms;
    -webkit-transition: all ease-in-out 200ms;
    transition: all ease-in-out 200ms;
 }
 .buy-ticket:hover {
-	cursor:pointer;
-	-o-transform: translate3d(5px, 5px, 5px);
-	-ms-transform: translate3d(5px, 5px, 5px);
-	-moz-transform: translate3d(5px, 5px, 5px);
-	-webkit-transform: translate3d(5px, 5px, 5px);
-	transform: translate3d(5px, 5px, 5px);
-	-o-transition: all linear 100ms;
-	-moz-transition: all linear 100ms;
-	-webkit-transition: all linear 100ms;
-	transition: all linear 100ms;
-	box-shadow: 5px 2px 0 0 #e08776;
+  cursor:pointer;
+  -o-transform: translate3d(5px, 5px, 5px);
+  -ms-transform: translate3d(5px, 5px, 5px);
+  -moz-transform: translate3d(5px, 5px, 5px);
+  -webkit-transform: translate3d(5px, 5px, 5px);
+  transform: translate3d(5px, 5px, 5px);
+  -o-transition: all linear 100ms;
+  -moz-transition: all linear 100ms;
+  -webkit-transition: all linear 100ms;
+  transition: all linear 100ms;
+  box-shadow: 5px 2px 0 0 #e08776;
 }
 
 .buy-ticket-mobile {
@@ -357,17 +357,17 @@ h1 {
     -webkit-box-shadow: #444 1px 1px 0, #444 2px 2px 0, #444 3px 3px 0, #444 4px 4px 0, #444 5px 5px 0, #444 6px 6px 0, #444 7px 7px 0, #444 8px 8px 0;
 }
 .button-starter-blog:hover {
-	cursor:pointer;
-	-o-transform: translate3d(5px, 5px, 5px);
-	-ms-transform: translate3d(5px, 5px, 5px);
-	-moz-transform: translate3d(5px, 5px, 5px);
-	-webkit-transform: translate3d(5px, 5px, 5px);
-	transform: translate3d(5px, 5px, 5px);
-	-o-transition: all ease-in-out 200ms;
-	-moz-transition: all ease-in-out 200ms;
-	-webkit-transition: all ease-in-out 200ms;
-	transition: all ease-in-out 200ms;
-	-webkit-box-shadow: #444 1px 1px 0,
+  cursor:pointer;
+  -o-transform: translate3d(5px, 5px, 5px);
+  -ms-transform: translate3d(5px, 5px, 5px);
+  -moz-transform: translate3d(5px, 5px, 5px);
+  -webkit-transform: translate3d(5px, 5px, 5px);
+  transform: translate3d(5px, 5px, 5px);
+  -o-transition: all ease-in-out 200ms;
+  -moz-transition: all ease-in-out 200ms;
+  -webkit-transition: all ease-in-out 200ms;
+  transition: all ease-in-out 200ms;
+  -webkit-box-shadow: #444 1px 1px 0,
                 #444 2px 2px 0,
                 #444 3px 3px 0,
                 #444 4px 4px 0;
@@ -464,16 +464,16 @@ h1 {
 }
 .button-starter-speaker:hover {
   cursor:pointer;
-	-o-transform: translate3d(5px, 5px, 5px);
-	-ms-transform: translate3d(5px, 5px, 5px);
-	-moz-transform: translate3d(5px, 5px, 5px);
-	-webkit-transform: translate3d(5px, 5px, 5px);
-	transform: translate3d(5px, 5px, 5px);
-	-o-transition: all ease-in-out 200ms;
-	-moz-transition: all ease-in-out 200ms;
-	-webkit-transition: all ease-in-out 200ms;
-	transition: all ease-in-out 200ms;
-	-webkit-box-shadow: #444 1px 1px 0,
+  -o-transform: translate3d(5px, 5px, 5px);
+  -ms-transform: translate3d(5px, 5px, 5px);
+  -moz-transform: translate3d(5px, 5px, 5px);
+  -webkit-transform: translate3d(5px, 5px, 5px);
+  transform: translate3d(5px, 5px, 5px);
+  -o-transition: all ease-in-out 200ms;
+  -moz-transition: all ease-in-out 200ms;
+  -webkit-transition: all ease-in-out 200ms;
+  transition: all ease-in-out 200ms;
+  -webkit-box-shadow: #444 1px 1px 0,
                 #444 2px 2px 0,
                 #444 3px 3px 0,
                 #444 4px 4px 0;
@@ -1393,7 +1393,7 @@ h1 {
     justify-content: center;
 }
 .contact-txt {
-	padding:20px;
+  padding:20px;
   display: flex;
    flex-wrap: wrap;
    flex-direction: column;
@@ -2066,7 +2066,6 @@ nav a.prev {
    }
    .partners-item > a > img {
       max-width: 50% !important;
-      max-height: 50px !important;
       margin:10px !important;
    }
    .ticket-stan-heading::after {
@@ -2200,8 +2199,8 @@ nav a.prev {
       margin: 0.9rem 0;
    }
    .partners-item > a > img {
-      max-width: 100% !important;
-      max-height: 50px !important;
+      max-width: 80% !important;
+      // max-height: 50px !important;
       margin:10px !important;
    }
    .speakers-item:hover >a>.speaker-name {
@@ -2360,8 +2359,8 @@ nav a.prev {
       padding: 10px;
    }
    .partners-item > a > img {
-      max-width: 100% !important;
-      max-height: 50px !important;
+      max-width: 80% !important;
+      // max-height: 50px !important;
       margin:10px !important;
    }
    .load-more-blog-next {
@@ -2757,8 +2756,8 @@ nav a.prev {
       width: 30% !important;
    }
    .partners-item > a > img {
-      max-width: 100% !important;
-      max-height: 50px !important;
+      max-width: 80% !important;
+      // max-height: 50px !important;
       margin:10px !important;
    }
    .blog-grid {
@@ -3342,8 +3341,8 @@ nav a.prev {
       padding: 10px;
    }
    .partners-item > a > img {
-      max-width: 100% !important;
-      max-height: 50px !important;
+      max-width: 80% !important;
+      // max-height: 50px !important;
       margin:10px !important;
    }
    .blog-description {

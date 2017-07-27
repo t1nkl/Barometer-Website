@@ -51,7 +51,9 @@ class PartnersCrudController extends CrudController
         $this->crud->addField([
                                 'name' => 'image',
                                 'label' => 'Изображение',
-                                'type' => 'upload',
+                                'type' => 'image',
+                                'crop' => true,
+                                'aspect_ratio' => 1,
                                 'upload' => true,
                             ]);
 
