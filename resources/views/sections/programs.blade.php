@@ -7,18 +7,26 @@
                 <img src="/img/headers/en/schedule.svg" class="img-headers" alt="">
             @endif
         </div>
-        <div class="col-md-12 programm-table">
+        <div class="col-md-12 programm-table" style="padding-right:1px;padding-left:1px;">
 
             <!-- Nav tabs -->
             <ul class="nav nav-tabs" id="tablist" role="tablist">
                 @foreach($fest_days as $fest_day)
                     @if($loop->iteration == 1)
                         <li class="nav-item">
-                            <a class="nav-link active" data-toggle="tab" href="#fest_day{{ $loop->iteration }}" role="tab">{{explode("(",$fest_day)[0]}}</a>
+                        @if($locale == 'ru')
+                            <a class="nav-link active" data-toggle="tab" href="#fest_day{{ $loop->iteration }}" role="tab">День {{explode("День", explode("(",$fest_day)[0])[1]}}</a>
+                        @else
+                            <a class="nav-link active" data-toggle="tab" href="#fest_day{{ $loop->iteration }}" role="tab">Day {{explode("День", explode("(",$fest_day)[0])[1]}}</a>
+                        @endif
                         </li>
                     @else
                         <li class="nav-item">
-                            <a class="nav-link" data-toggle="tab" href="#fest_day{{ $loop->iteration }}" role="tab">{{explode("(",$fest_day)[0]}}</a>
+                        @if($locale == 'ru')
+                            <a class="nav-link" data-toggle="tab" href="#fest_day{{ $loop->iteration }}" role="tab">День {{explode("День", explode("(",$fest_day)[0])[1]}}</a>
+                        @else
+                            <a class="nav-link" data-toggle="tab" href="#fest_day{{ $loop->iteration }}" role="tab">Day {{explode("День", explode("(",$fest_day)[0])[1]}}</a>
+                        @endif
                         </li>
                     @endif
                 @endforeach
@@ -38,7 +46,6 @@
                     @endif
                 @endforeach
             </div>
-
         </div>
 
         @foreach($fest_days as $fest_date => $fest_day)
@@ -61,7 +68,7 @@
                                     <div class="col-md-1 program-translate-modal">
                                         <p class="program-modal-speaker">SPEAKER</p>
                                     </div>
-                                    <div class="col-md-3 program-img-modal"><img src="/{{ $program->speaker->image }}" class="img-fluid program-modal-img">
+                                    <div class="col-md-3 program-img-modal"><img src="{{ $program->speaker->image }}" class="img-fluid program-modal-img">
                                         <h4 class="program-name-modal">{{ $program->speaker->title }}</h4><span class="position-modal">{{ $program->speaker->position }}</span></div>
                                     <button class="md-close"></button>
                                 </div>
@@ -84,7 +91,7 @@
                                     <div class="col-md-1 program-translate-modal">
                                         <p class="program-modal-speaker">SPEAKER</p>
                                     </div>
-                                    <div class="col-md-3 program-img-modal"><img src="/{{ $program->speaker->image }}" class="img-fluid program-modal-img">
+                                    <div class="col-md-3 program-img-modal"><img src="{{ $program->speaker->image }}" class="img-fluid program-modal-img">
                                         <h4 class="program-name-modal">{{ $program->speaker->title }}</h4><span class="position-modal">{{ $program->speaker->position }}</span></div>
                                     <button class="md-close"></button>
                                 </div>
@@ -95,10 +102,11 @@
                 @endif
             @endforeach
         @endforeach
-
-    </div>
-    <a href="#" class="buybutton md-trigger" data-modal="modal-buy-ticket">
-        <div class="circle-pop"></div>
+        <a href="#" class="buybuttonMain md-trigger" data-modal="modal-buy-ticket">
+        <!-- <div class="circle-pop"></div> -->
         <span class="bilettext">@lang('static.header.buy_ticket')</span>
     </a>
+
+    </div>
+    
 </div>

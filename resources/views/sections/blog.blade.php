@@ -23,9 +23,10 @@
 				</div>
 			@endforeach
 		</div>
-	</div>
-	<a href="#" class="buybutton md-trigger" data-modal="modal-buy-ticket">
-		<div class="circle-pop"></div>
+		<a href="#" class="buybuttonMain md-trigger" data-modal="modal-buy-ticket">
+		<!-- <div class="circle-pop"></div> -->
 		<span class="bilettext">@lang('static.header.buy_ticket')</span>
 	</a>
+	</div>
+	
 </div>

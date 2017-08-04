@@ -17,11 +17,10 @@ class VisitorIp extends Model
     protected $table = 'visitors_ip';
     protected $primaryKey = 'id';
     public $timestamps = true;
-    // protected $guarded = ['id'];
+    protected $guarded = ['id'];
     // protected $fillable = [];
     // protected $hidden = [];
     // protected $dates = [];
-    protected $fillable = ['visitor'];
 
     /*
     |--------------------------------------------------------------------------
@@ -38,10 +37,6 @@ class VisitorIp extends Model
             $i->visitor = $id;
             $i->save();
         }
-        // DB::table('visitors_id')->insert([
-            // 'visitor' => $id,
-            // 'created_at' =>
-        // ]);
     }
 
     public static function dailyCountVisitorIp($number)

@@ -3,13 +3,13 @@
 
 
 @section('title')
-    {{$settings->seo_title}}
+{{$settings->seo_title}}
 @endsection
 @section('description')
-    {{$settings->seo_description}}
+{{$settings->seo_description}}
 @endsection
 @section('keywords')
-    {{$settings->seo_keywords}}
+{{$settings->seo_keywords}}
 @endsection
 
 

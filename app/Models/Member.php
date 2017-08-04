@@ -2,8 +2,8 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
 use Backpack\CRUD\CrudTrait;
+use Illuminate\Database\Eloquent\Model;
 
 class Member extends Model
 {
@@ -18,8 +18,7 @@ class Member extends Model
     protected $table = 'members';
     protected $primaryKey = 'id';
     public $timestamps = true;
-    // protected $guarded = ['id'];
-    protected $fillable = ['name', 'city', 'organization', 'position', 'phone', 'email'];
+    protected $guarded = ['id'];
     // protected $hidden = [];
     // protected $dates = [];
 

@@ -32,6 +32,7 @@ class HomeController extends Controller
             VisitorId::addVisitorId(session()->getId(), null);
         }
         VisitorIp::addVisitorIp($request->ip());
+
         $url_array = array_slice(explode("/",url()->current()),3);
         $lang = $url_array[0];
         if(!empty($lang) && array_key_exists($lang, \Config::get('app.locales'))) {
@@ -39,21 +40,22 @@ class HomeController extends Controller
         } else {
             Date::setLocale('ru');
         }
+
         $browser = Identify::browser()->getName();
         $settings = Setting::first();
         $event = Event::first();
-        $speakers = Speaker::orderBy("rgt")->paginate(10);
-        $bars = Bar::orderBy("rgt")->paginate(10);
         $blogs = Article::orderBy("rgt")->limit(2)->get();
-        $mainpartners = Mainpartners::limit(3)->get();
-        $partners = Partners::paginate(18);
+        $mainpartners = Mainpartners::limit(4)->get();
         $tickets = Ticket::all();
         $programs = Program::all();
         $scenes = Scene::all();
         $program_days = Setting::first()->getDays(1);
         $fest_days = Setting::first()->getDays();
+        // $speakers = Speaker::orderBy("rgt")->paginate(10);
+        // $bars = Bar::orderBy("rgt")->paginate(10);
+        // $partners = Partners::paginate(18);
 
-        return view('home', compact('browser', 'settings', 'event', 'speakers', 'bars', 'blogs', 'mainpartners', 'partners', 'tickets', 'programs', 'scenes', 'program_days', 'fest_days'));
+        return view('home', compact('browser', 'settings', 'event', 'blogs', 'mainpartners', 'tickets', 'programs', 'scenes', 'program_days', 'fest_days'));
     }
 
     public function speakersAjax( Request $request )

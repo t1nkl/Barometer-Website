@@ -444,27 +444,27 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-3 col-xs-6">
-                        <div class="small-box bg-black">
+                        <div class="small-box bg-gray">
                             <div class="inner">
-                                <h3>0</h3>
+                                <h3>{{$member}}</h3>
                                 <p>Хотят участвовать</p>
                             </div>
                             <div class="icon" style="top:0">
-                                <i class="ion ion-stats-bars"></i>
+                                <i class="ion ion-tshirt"></i>
                             </div>
-                            <a href="{{ url(config('backpack.base.route_prefix', 'admin') . '/') }}" class="small-box-footer">Больше <i class="fa fa-arrow-circle-right"></i></a>
+                            <a href="{{ url(config('backpack.base.route_prefix', 'admin') . '/members') }}" class="small-box-footer">Больше <i class="fa fa-arrow-circle-right"></i></a>
                         </div>
                     </div>
                     <div class="col-lg-3 col-xs-6">
-                        <div class="small-box bg-black">
+                        <div class="small-box bg-gray">
                             <div class="inner">
-                                <h3>0</h3>
+                                <h3>{{$contact}}</h3>
                                 <p>Заявки на билеты</p>
                             </div>
                             <div class="icon" style="top:0">
-                                <i class="ion ion-stats-bars"></i>
+                                <i class="ion ion-cash"></i>
                             </div>
-                            <a href="{{ url(config('backpack.base.route_prefix', 'admin') . '/') }}" class="small-box-footer">Больше <i class="fa fa-arrow-circle-right"></i></a>
+                            <a href="{{ url(config('backpack.base.route_prefix', 'admin') . '/contact') }}" class="small-box-footer">Больше <i class="fa fa-arrow-circle-right"></i></a>
                         </div>
                     </div>
                     <div class="col-lg-3 col-xs-6">

@@ -1,20 +1,25 @@
 var ModalEffects = (function() {
 
-	'use strict';
-
 	function init() {
-
-		'use strict';
 
 		var overlay = document.querySelector( '.md-overlay' );
 
 		[].slice.call( document.querySelectorAll( '.md-trigger' ) ).forEach( function( el, i ) {
 
 			// console.log(el.getAttribute( 'data-modal' ));
-			
-			var modal = document.querySelector( '#' + el.getAttribute( 'data-modal' ) ),
+
+			if( el.getAttribute( 'data-modal' ) == null ) {
+
+				var modal = document.querySelector( '#' + 'modal-buy-ticket' ),
 				close = modal.querySelector( '.md-close' );
 
+			} else {
+
+				var modal = document.querySelector( '#' + el.getAttribute( 'data-modal' ) ),
+				close = modal.querySelector( '.md-close' );
+
+			}
+				
 			function removeModal( hasPerspective ) {
 				classie.remove( modal, 'md-show' );
 

@@ -102,7 +102,7 @@ class Article extends Model
         $attribute_name = "image";
         $disk = "uploads";
         $destination_path = "BLOG_Gallery/".$this->getSlugOrTitleAttribute();
-        $image_height = 670;
+        $image_height = 900;
 
         $this->uploadImageToDisk($value, $attribute_name, $disk, $destination_path, $image_height);
     }

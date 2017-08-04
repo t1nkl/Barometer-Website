@@ -56,7 +56,7 @@ class Partners extends Model
     {
         $attribute_name = "image";
         $disk = "uploads";
-        $destination_path = "PARTNERS_Gallery/".$this->getSlugOrTitleAttribute();
+        $destination_path = "PARTNERS_Gallery/".str_slug($this->title);
         $image_width = 270;
 
         if ($value==null) {

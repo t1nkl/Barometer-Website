@@ -2,7 +2,7 @@
 <div class="section row" id="section0">
 	<nav class="intro col-md-12 navigation-block navbar navbar-light navbar-toggleable-md">
 		<div class="event-2016">
-			<a href="{{url('/'.$locale)}}" class="event-2016-link" target="_blank">
+			<a href="http://2016.barometer.show" class="event-2016-link" target="_blank">
 				<p><img src="/img/plane-left.svg" class="event-2016-plane" alt=""></p>
 				<p class="event-2016-txt">@lang('static.header.last_event')</p>
 			</a>
@@ -17,22 +17,22 @@
 			<ul class="navbar-nav mr-auto">
                 @if (Identify::os()->getName() == 'Windows' || Identify::os()->getName() == 'OS X' || Identify::os()->getName() == 'Linux')
                     <li class="nav-item">
-                        <a data-menuanchor="О-мероприятии" class="nav-link main-menu" href="#О-мероприятии">@lang('static.header.navbar.about')</a>
+                        <a data-menuanchor="about" class="nav-link main-menu" href="#about">@lang('static.header.navbar.about')</a>
                     </li>
                     <li class="nav-item">
-                        <a data-menuanchor="Спикеры" class="nav-link main-menu" href="#Спикеры">@lang('static.header.navbar.speakers')</a>
+                        <a data-menuanchor="speakers" class="nav-link main-menu" href="#speakers">@lang('static.header.navbar.speakers')</a>
                     </li>
                     <li class="nav-item">
-                        <a data-menuanchor="Бары" class="nav-link main-menu" href="#Бары">@lang('static.header.navbar.bars')</a>
+                        <a data-menuanchor="bars" class="nav-link main-menu" href="#bars">@lang('static.header.navbar.bars')</a>
                     </li>
                     <li class="nav-item">
-                        <a data-menuanchor="Блог" class="nav-link main-menu" href="/{{$locale}}/blog">@lang('static.header.navbar.blog')</a>
+                        <a data-menuanchor="blog" class="nav-link main-menu" href="/{{$locale}}/blog">@lang('static.header.navbar.blog')</a>
                     </li>
                     <li class="nav-item">
-                        <a data-menuanchor="Об организаторах" class="nav-link main-menu" href="#Об организаторах">@lang('static.header.navbar.organisation')</a>
+                        <a data-menuanchor="organizers" class="nav-link main-menu" href="#organizers">@lang('static.header.navbar.organisation')</a>
                     </li>
                     <li class="nav-item">
-                        <a data-menuanchor="Контакты" class="nav-link main-menu" href="#Контакты">@lang('static.header.navbar.contact')</a>
+                        <a data-menuanchor="contacts" class="nav-link main-menu" href="#contacts">@lang('static.header.navbar.contact')</a>
                     </li>
                 @else
                     <li class="nav-item">
@@ -79,7 +79,17 @@
 	</nav>
 	<div class="col-md-12 header-illustration" style="background-image: url(/../img/image-1-min.png)">
 		<div class="header-info">
-			<h1 class="header-timing"><span class="numbers">{{ Date::parse($settings->start_date)->format('j') }} - {{ Date::parse($settings->end_date)->format('j F') }}</span></h1>
+			<h1 class="header-timing">
+				<span class="numbers">{{ Date::parse($settings->start_date)->format('j') }}</span> 
+				@if(Date::parse($settings->start_date)->format('F') == Date::parse($settings->end_date)->format('F'))
+
+				@else
+					{{ str_replace("ь", "я", Date::parse($settings->start_date)->format('F')) }} 
+				@endif
+				&#8211; 
+				<span class="numbers">{{ Date::parse($settings->end_date)->format('j') }}</span> 
+				{{ str_replace("ь", "я", Date::parse($settings->end_date)->format('F')) }}
+			</h1>
 			<h2 class="header-timing-h2">{{$settings->place}} <span class="dot"></span> BAROMETER International Bar Show</h2>
 			<a class="buy-ticket md-trigger" data-modal="modal-buy-ticket">@lang('static.header.buy_ticket')</a>
 		</div>
@@ -91,7 +101,7 @@
 		<div class="md-modal md-effect-1" id="modal-video">
 			<div class="md-content watchvideo-modal">
 				<div class="col-md-12 watchvideo-block">
-					<iframe width="100%" height="600px" src="https://www.youtube.com/embed/eKFTSSKCzWA" frameborder="0" allowfullscreen></iframe>
+					<iframe width="100%" height="600px" src="{{$settings->youtube_url}}" frameborder="0" allowfullscreen></iframe>
 					<button class="md-close"></button>
 				</div>
 			</div>

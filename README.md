@@ -1,6 +1,6 @@
 # Barometer Website
 
-[![N|Solid](http://i.piccy.info/i9/72543b1c5a10c2f50ec5e0cd0f668247/1500981205/105814/1164691/165_227_142_161_8082_ru.jpg)](http://165.227.142.161:8082)
+[![N|Solid](http://i.piccy.info/i9/72543b1c5a10c2f50ec5e0cd0f668247/1500981205/105814/1164691/165_227_142_161_8082_ru.jpg)](http://www.barometer.show)
 
 This website made by me:) I used:
   - Laravel 5.4
@@ -12,10 +12,8 @@ This website made by me:) I used:
   - Intervention
   - Spatie
 
-### Link  -  [Barometer](http://165.227.142.161:8082)
+### Link  -  [Barometer](http://www.barometer.show)
 
 ### Todos
-
- - Front-end fixes
- - Minor fixes
- - Upload multiimage fixes
+ - mobile-version fixes
+ - optimisation

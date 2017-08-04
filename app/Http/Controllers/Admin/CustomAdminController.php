@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Support\Facades\DB;
 use Backpack\Base\app\Http\Controllers\Controller as Controller;
-use App\Models\{Speaker, Bar, Partners, Program, VisitorId, VisitorIp};
+use App\Models\{Speaker, Bar, Partners, Program, Contact, Member, VisitorId, VisitorIp};
 
 class CustomAdminController extends Controller
 {
@@ -30,6 +30,8 @@ class CustomAdminController extends Controller
         $this->data['bar'] = Bar::all()->count();
         $this->data['partner'] = Partners::all()->count();
         $this->data['program'] = Program::all()->count();
+        $this->data['contact'] = Contact::all()->count();
+        $this->data['member'] = Member::all()->count();
 
         $this->data['visitorid_browser'] = VisitorId::selectRaw('count(id) as value, browser')->groupBy('browser')->get()->toArray();
         $this->data['visitorid_os'] = VisitorId::selectRaw('count(id) as value, os')->groupBy('os')->get()->toArray();

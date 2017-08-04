@@ -66,10 +66,23 @@
 					<a data-menuanchor="Блог" class="nav-link" href="#Блог">@lang('static.header.navbar.blog')</a>
 				</li>
 			</ul>
+
 		</div>
-	</div>
-	<a href="#" class="buybutton md-trigger" data-modal="modal-buy-ticket">
+		<div class="site-info__colormelon">
+				Made with
+				<span>♥</span> 
+				by 
+				<a href="https://leodigital.com.ua" target="_blank">
+					LeoDigital
+				</a>
+			</div>
+		<!-- <a href="#" class="buybuttonMain md-trigger" data-modal="modal-buy-ticket">
 		<div class="circle-pop"></div>
 		<span class="bilettext">@lang('static.header.buy_ticket')</span>
-	</a>
+			</a> -->
+	</div>
+	
+	<!-- <p class="copyright-text">
+		Made with <span style="color:#ed2f33">♥</span> by <a href="https://leodigital.com.ua" target="_blank" style="color:#C4D468">LeoDigital</a>
+	</p> -->
 </div>

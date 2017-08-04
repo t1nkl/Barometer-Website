@@ -19,7 +19,7 @@ class MemberCrudController extends CrudController {
 		*/
         $this->crud->setModel("App\Models\Member");
         $this->crud->setRoute(config('backpack.base.route_prefix', 'admin').'/members');
-        $this->crud->setEntityNameStrings('член', 'члены');
+        $this->crud->setEntityNameStrings('хотят участвовать', 'хотят участвовать');
 
         /*
 		|--------------------------------------------------------------------------

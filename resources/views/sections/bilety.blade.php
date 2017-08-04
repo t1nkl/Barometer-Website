@@ -8,17 +8,17 @@
 				<img src="/img/headers/en/tickets.svg" class="img-headers" alt="">
 			@endif
 		</div>
+		
 		@foreach($tickets as $ticket)
-			@if($ticket->id && $ticket->id == 1)
+			@if(isset($ticket->id) && $ticket->id == 1)
 				<div class="col-md-4 standart-ticket">
 					<h2 class="ticket-stan-heading">{{$ticket->type}} <span>{{$ticket->price}}</span>@lang('static.body.ticket_prise')</h2>
 					@foreach(json_decode($ticket->options, true) as $value)
 						<p class="ticket-stan">{!! $value['title'] !!}</p>
-
 					@endforeach
-					<a href="{{$settings->ticket_url}}" class="button-standart">@lang('static.header.buy_ticket')</a>
+					<a href="#" data-modal="modal-buy-ticket" class="button-standart md-trigger">@lang('static.header.buy_ticket')</a>
 				</div>
-			@elseif($ticket->id && $ticket->id == 2)
+			@elseif(isset($ticket->id) && $ticket->id == 2)
 				<div class="col-md-4 premium-ticket">
 					<h2 class="ticket-prem-heading">{{$ticket->type}} <span>{{$ticket->price}}</span>@lang('static.body.ticket_prise')</h2>
 					@foreach(json_decode($ticket->options, true) as $value)
@@ -27,18 +27,20 @@
 					@foreach(json_decode($ticket->premium_options, true) as $value)
 						<p class="ticket-prem golden-plus">{!! $value['title'] !!}</p>
 					@endforeach
-					<a href="{{$settings->ticket_url}}" class="button-premium">@lang('static.header.buy_ticket')</a>
+					<a href="#" data-modal="modal-buy-ticket" class="button-premium md-trigger">@lang('static.header.buy_ticket')</a>
 				</div>
 				<div class="buy-ticket-mobile-section">
-					<a href="{{$settings->ticket_url}}" class="buy-ticket-mobile">@lang('static.header.buy_ticket')</a>
+					<a href="#" data-modal="modal-buy-ticket" class="buy-ticket-mobile md-trigger">@lang('static.header.buy_ticket')</a>
 				</div>
 			@endif
 		@endforeach
-	</div>
-	<a href="#" class="buybutton md-trigger" data-modal="modal-buy-ticket">
+		
+		<!-- <a href="#" class="buybuttonMain md-trigger" data-modal="modal-buy-ticket">
 		<div class="circle-pop"></div>
-		<span class="bilettext">@lang('static.header.buy_ticket')</span>
-	</a>
+			<span class="bilettext">@lang('static.header.buy_ticket')</span>
+		</a> -->
+	</div>
+	
 </div>
 
 

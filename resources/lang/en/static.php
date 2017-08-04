@@ -13,7 +13,10 @@ return [
             'contact'      => 'Contacts',
             'program'      => 'Program of the event',
             'partner'      => 'Partners',
-
+            'location'     => 'About location',
+            'ticket'       => 'Tickets',
+            'programs'     => 'Program',
+            'main'         => 'Main',
         ],
         'buy_ticket' => 'Buy a ticket',
         'video' => 'Watch the video',
@@ -31,5 +34,16 @@ return [
         'more' => 'more',
         'search' => 'You push',
         'back' => 'Back',
+    ],
+    'modal_form' => [
+        'name' => 'Name',
+        'city' => 'City',
+        'organization' => 'Organization',
+        'position' => 'Position',
+        'phone' => 'Phone',
+        'buy' => 'Buy',
+        'member' => 'Become member',
+        'success' => 'Thank you, your application was successfully left',
+        'error' => 'Enter correct data',
     ],
 ];
