@@ -49,9 +49,9 @@
             </ul>
           </li>
 
-          <li><a href="{{ url(config('backpack.base.route_prefix', 'admin') . '/members') }}"><i class="fa fa-users"></i> <span>Хотят участв.</span></a></li>
+          <li><a href="{{ url(config('backpack.base.route_prefix', 'admin') . '/members') }}"><i class="fa fa-users"></i> <span>Желающие </span><span class="badge" style="margin-top:-1px"> {{ \App\Models\Member::all()->count() }}</span></a></li>
 
-          <li><a href="{{ url(config('backpack.base.route_prefix', 'admin') . '/contact') }}"><i class="fa fa-users"></i> <span>Хотят билет</span></a></li>
+          <li><a href="{{ url(config('backpack.base.route_prefix', 'admin') . '/contact') }}"><i class="fa fa-users"></i> <span>Билеты </span><span class="badge" style="margin-top:-1px"> {{ \App\Models\Contact::all()->count() }}</span></a></li>
 
           <li><a href="{{ url(config('backpack.base.route_prefix', 'admin') . '/settings/1/edit') }}"><i class="fa fa-sun-o"></i> <span>Настройки сайта</span></a></li>
 
