@@ -15,7 +15,7 @@ class CreateTicketsTable extends Migration
     {
         Schema::create('tickets', function (Blueprint $table) {
             $table->increments('id');
-            $table->enum('type', ['Standart', 'Premium'])->default('Standart');
+            $table->enum('type', ['Standard', 'Premium'])->default('Standard');
             $table->string('price')->nullable();
             $table->text('options')->nullable();
             $table->text('premium_options')->nullable();

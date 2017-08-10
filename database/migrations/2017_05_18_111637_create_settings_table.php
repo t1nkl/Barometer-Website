@@ -25,6 +25,7 @@ class CreateSettingsTable extends Migration
             $table->text('address')->nullable();
             $table->string('phone')->nullable();
             $table->string('ticket_url')->nullable();
+            $table->string('youtube_url')->nullable();
 
             $table->string('url')->nullable();
             $table->string('facebook')->nullable();

@@ -21,7 +21,7 @@ class CreateProgramsTable extends Migration
             $table->text('title')->nullable();
             $table->time('start_date')->nullable();
             $table->time('end_date')->nullable();
-            $table->enum('type', ['Standart', 'Premium'])->default('Standart');
+            $table->enum('type', ['Standard', 'Premium'])->default('Standard');
             $table->text('content')->nullable();
             $table->timestamps();
             $table->softDeletes();
