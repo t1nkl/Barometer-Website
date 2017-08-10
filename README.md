@@ -1,6 +1,7 @@
 # Barometer Website
 
-[![N|Solid](http://i.piccy.info/i9/72543b1c5a10c2f50ec5e0cd0f668247/1500981205/105814/1164691/165_227_142_161_8082_ru.jpg)](http://www.barometer.show)
+[![N|Solid](http://i.piccy.info/i9/b2ff8beaed006587c45b9b84592b7d25/1502360864/165741/1164691/www_barometer_show_ru_1_.jpg)](http://www.barometer.show)
+![N|Solid](http://i.piccy.info/i9/fd975da1935e77abd5a78f52a9569175/1502360942/264162/1164691/www_barometer_show_admin_dashboard.png)
 
 This website made by me:) I used:
   - Laravel 5.4
@@ -13,7 +14,3 @@ This website made by me:) I used:
   - Spatie
 
 ### Link  -  [Barometer](http://www.barometer.show)
-
-### Todos
- - mobile-version fixes
- - optimisation

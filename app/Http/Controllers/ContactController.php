@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Mail;
 use Illuminate\Http\Request;
-use Illuminate\Http\Response;
 use App\Models\Contact;
 
 class ContactController extends Controller
@@ -37,23 +36,13 @@ class ContactController extends Controller
      */
     public function store(Request $request)
     {
-        $contact = new Contact;
-        $contact->name = trim(stripslashes(htmlspecialchars($request->input('name'))));
-        $contact->city = $request->input('city');
-        $contact->organization = $request->input('organization');
-        $contact->position = $request->input('position');
-        $contact->phone = $request->input('phone');
-        $contact->email = $request->input('email');
-
-        if ($contact->save()){
+        if ($contact = Contact::create($request->all())){
             try {
-//                Mail::send('emails.email', ['name' => $contact->name, 'phone' => $contact->phone, 'url' => $contact->url, 'email' => $contact->email, 'content' => $contact->content, 'date' => date('Y-m-d H:i:s')], function ($message) {
-//                    $message->from('order@leodigital.com.ua', 'LeoDigital');
-//                    $message->to('order@leodigital.com.ua', 'LeoDigital')->subject('New message!');
-//                });
+                Mail::to("bar@barometer.show")->send(new \App\Mail\ContactForm($contact));
+                Mail::to("director@barometer.show")->send(new \App\Mail\ContactForm($contact));
                 return response()->json(200);
             } catch (\Exception $e) {
-                return response()->json(['error' => true, 'msg' => 'test'], 400);
+                return response()->json(['error' => true, 'msg' => $e->getMessage()], 400);
             }
         }
     }

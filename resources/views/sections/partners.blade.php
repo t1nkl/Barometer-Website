@@ -26,16 +26,16 @@
 	<div class="col-md-12 starter-section fatBlock">
 		<div class="col-md-12 ">
 			@if($locale == 'ru')
-				<img src="/img/headers/partn.svg" class="img-headers" alt="">
+				<img src="/img/headers/partn.png" class="img-headers" alt="">
 			@else
-				<img src="/img/headers/en/partners.svg" class="img-headers" alt="">
+				<img src="/img/headers/en/partners.png" class="img-headers" alt="">
 			@endif
 			<div class="partners-all">
 				<partners></partners>
 			</div>
 		</div>
-		<!-- <a href="#" class="buybuttonMain md-trigger" data-modal="modal-buy-ticket">
+		<a href="#" class="buybuttonMain md-trigger partnersButton" data-modal="modal-buy-ticket">
 			<span class="bilettext">@lang('static.header.buy_ticket')</span>
-		</a> -->
+		</a>
 	</div>
 </div>

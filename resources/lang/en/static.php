@@ -43,7 +43,7 @@ return [
         'phone' => 'Phone',
         'buy' => 'Buy',
         'member' => 'Become member',
-        'success' => 'Thank you, your application was successfully left',
+        'success' => 'Thank you for the desire to become our partner. We\'ll be in touch soon.',
         'error' => 'Enter correct data',
     ],
 ];

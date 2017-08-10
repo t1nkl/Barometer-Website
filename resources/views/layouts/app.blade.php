@@ -104,7 +104,7 @@
 			$(".loader").delay(100).fadeOut("slow");
 		});
 
-		<!-- /*===== timetable overflow =====*/ -->
+		<!-- /*===== video modal stop =====*/ -->
 		$('.md-close').click(function() {
 			jQuery("iframe").each(function() {
 		        jQuery(this)[0].contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*')
@@ -163,8 +163,7 @@
 					'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
 				},
 				success:function(data){
-					window.location.href = "{!! $settings->ticket_url !!}";
-					// $("#contactformbar").slideUp(), $(".nesto-member-response").html("@lang('static.modal_form.success')")
+					$("#contactformbar").slideUp(), $(".nesto-member-response").html("@lang('static.modal_form.success')")
 				},
 				error: function(data){
 					$("#contactformbar").slideUp(), $(".nesto-member-response").html("Error")
@@ -227,6 +226,8 @@
 	</script>
 	<script type="text/javascript" src="{{ asset('js/classie.js') }}"></script>
 	<script type="text/javascript" src="{{ asset('js/modalEffects.js') }}"></script>
+
+	<!-- /*===== google map script =====*/ -->
 	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRsEXnF7-eUyizn92KP6W_RxfCZ0ZnEmA&callback=initMap"></script>
 	<script type="text/javascript">
     	function initMap() {
