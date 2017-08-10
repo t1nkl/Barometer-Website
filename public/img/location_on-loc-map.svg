@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="38px"
+   height="55px"
+   viewBox="0 0 38 55"
+   version="1.1"
+   id="svg12"
+   sodipodi:docname="location_on-loc-map.svg"
+   inkscape:version="0.92.1 r15371">
+  <metadata
+     id="metadata16">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>location_on-loc</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="857"
+     inkscape:window-height="594"
+     id="namedview14"
+     showgrid="false"
+     inkscape:zoom="4.2909091"
+     inkscape:cx="11.144068"
+     inkscape:cy="29.776774"
+     inkscape:window-x="771"
+     inkscape:window-y="251"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg12" />
+  <!-- Generator: Sketch 43.1 (39012) - http://www.bohemiancoding.com/sketch -->
+  <title
+     id="title2">location_on-loc</title>
+  <desc
+     id="desc4">Created with Sketch.</desc>
+  <defs
+     id="defs6" />
+  <g
+     id="Page-1"
+     stroke="none"
+     stroke-width="1"
+     fill="none"
+     fill-rule="evenodd"
+     fill-opacity="0.25"
+     style="fill:#a318a9;fill-opacity:1">
+    <g
+       id="Desktop-HD-Copy"
+       transform="translate(-173.000000, -4876.000000)"
+       fill="#FFFFFF"
+       style="fill:#a318a9;fill-opacity:1">
+      <g
+         id="loc"
+         transform="translate(0.000000, 4500.000000)"
+         style="fill:#a318a9;fill-opacity:1">
+        <path
+           d="M192,402.192 C193.194673,402.192 194.303995,401.893336 195.328,401.296 C196.352005,400.698664 197.162664,399.898672 197.76,398.896 C198.357336,397.893328 198.656,396.794673 198.656,395.6 C198.656,394.405327 198.357336,393.296005 197.76,392.272 C197.162664,391.247995 196.352005,390.437336 195.328,389.84 C194.303995,389.242664 193.194673,388.944 192,388.944 C190.805327,388.944 189.706672,389.242664 188.704,389.84 C187.701328,390.437336 186.901336,391.247995 186.304,392.272 C185.706664,393.296005 185.408,394.405327 185.408,395.6 C185.408,397.434676 186.047994,398.991994 187.328,400.272 C188.608006,401.552006 190.165324,402.192 192,402.192 Z M192,376.976 C195.41335,376.976 198.549319,377.807992 201.408,379.472 C204.224014,381.136008 206.463992,383.375986 208.128,386.192 C209.792008,389.050681 210.624,392.18665 210.624,395.6 C210.624,398.20268 209.984006,401.189316 208.704,404.56 C207.594661,407.418681 206.058676,410.511983 204.096,413.84 C202.474659,416.485347 200.618677,419.237319 198.528,422.096 C197.077326,424.101343 195.541341,426.06399 193.92,427.984 L192,430.224 L190.08,427.984 C188.458659,426.06399 186.922674,424.101343 185.472,422.096 C183.381323,419.237319 181.525341,416.485347 179.904,413.84 C177.941324,410.511983 176.405339,407.418681 175.296,404.56 C174.015994,401.189316 173.376,398.20268 173.376,395.6 C173.376,392.18665 174.207992,389.050681 175.872,386.192 C177.536008,383.375986 179.775986,381.136008 182.592,379.472 C185.450681,377.807992 188.58665,376.976 192,376.976 Z"
+           id="location_on-loc"
+           style="fill:#a318a9;fill-opacity:1" />
+      </g>
+    </g>
+  </g>
+</svg>

@@ -27,11 +27,15 @@ class PartnersCrudController extends CrudController
         |--------------------------------------------------------------------------
         */
 
+        $this->crud->allowAccess('reorder');
+        $this->crud->enableReorder('title', 1);
+
         // ------ CRUD COLUMNS
         $this->crud->addColumn([
                                 'name' => 'title',
                                 'label' => 'Название',
                             ]);
+        $this->crud->orderBy('rgt');
 
         // ------ CRUD FIELDS
         $this->crud->addField([

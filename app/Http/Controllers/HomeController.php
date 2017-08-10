@@ -51,9 +51,6 @@ class HomeController extends Controller
         $scenes = Scene::all();
         $program_days = Setting::first()->getDays(1);
         $fest_days = Setting::first()->getDays();
-        // $speakers = Speaker::orderBy("rgt")->paginate(10);
-        // $bars = Bar::orderBy("rgt")->paginate(10);
-        // $partners = Partners::paginate(18);
 
         return view('home', compact('browser', 'settings', 'event', 'blogs', 'mainpartners', 'tickets', 'programs', 'scenes', 'program_days', 'fest_days'));
     }
@@ -79,9 +76,9 @@ class HomeController extends Controller
     public function partnersAjax( Request $request )
     {
         if (Identify::os()->getName() == 'Windows' || Identify::os()->getName() == 'OS X' || Identify::os()->getName() == 'Linux') {
-            return Partners::paginate(18)->toArray()['data'];
+            return Partners::orderBy("rgt")->paginate(18)->toArray()['data'];
         } else {
-            return Partners::paginate(9)->toArray()['data'];
+            return Partners::orderBy("rgt")->paginate(9)->toArray()['data'];
         }
     }
 

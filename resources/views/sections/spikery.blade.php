@@ -10,7 +10,7 @@
 			<p class="starter-heading-description">{{$settings->speakers_content}}</p>
 		</div>
 		<div class="col-md-6 schedule">
-			<button onclick="window.location.href='{{ $settings->speakers_pdf }}'" class="button-starter-speaker">@lang('static.body.schedule')</button>
+			<button onclick="window.location.href='/uploads/{{ $settings->speakers_pdf }}'" class="button-starter-speaker">@lang('static.body.schedule')</button>
 		</div>
 	</div>
 	<div class="col-md-12 speakers-items">

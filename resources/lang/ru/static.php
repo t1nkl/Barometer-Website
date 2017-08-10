@@ -9,7 +9,7 @@ return [
             'speakers'     => 'Спикеры',
             'bars'         => 'Бары',
             'blog'         => 'Блог',
-            'organisation' => 'Об организаторах',
+            'organisation' => 'Организаторах',
             'contact'      => 'Контакты',
             'program'      => 'Программа мероприятия',
             'partner'      => 'Партнеры',

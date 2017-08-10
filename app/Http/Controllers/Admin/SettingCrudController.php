@@ -110,12 +110,12 @@ class SettingCrudController extends CrudController
                                 'type' => 'text',
                                 'tab' => 'Настройки',
                             ]);
-        // $this->crud->addField([
-        //                         'name' => 'youtube_url',
-        //                         'label' => 'Ссылка на видео YouTube',
-        //                         'type' => 'text',
-        //                         'tab' => 'Настройки',
-        //                     ]);
+        $this->crud->addField([
+                                'name' => 'youtube_url',
+                                'label' => 'Ссылка на видео YouTube',
+                                'type' => 'text',
+                                'tab' => 'Настройки',
+                            ]);
 
         $this->crud->addField([
                                 'name' => 'speakers_content',

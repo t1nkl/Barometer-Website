@@ -36,14 +36,14 @@
                     axios.get('/bars', {params:{
                         page: --this.page,
                     }})
-                        .then(response => {
-                            this.bars = response.data;
-                            this.visibleRight = true;
-                            if(this.page <= 1)
-                            {
-                                this.visibleLeft = false;
-                            }
-                        });
+                    .then(response => {
+                        this.bars = response.data;
+                        this.visibleRight = true;
+                        if(this.page <= 1)
+                        {
+                            this.visibleLeft = false;
+                        }
+                    });
                 }
                 setTimeout(()=> {this.show = true},500);
             },
@@ -55,14 +55,14 @@
                         page: ++this.page
                     }
                 })
-                    .then(response => {
-                        this.bars = response.data;
-                        this.visibleLeft = true;
-                        if(response.data.length < 10)
-                        {
-                            this.visibleRight = false;
-                        }
-                    });
+                .then(response => {
+                    this.bars = response.data;
+                    this.visibleLeft = true;
+                    if(response.data.length <= 10)
+                    {
+                        this.visibleRight = false;
+                    }
+                });
                 setTimeout(()=> {this.show = true},500);
             },
             loadBottom(){
@@ -84,11 +84,11 @@
         created(){
             axios.get('/bars', {
                 params:
-                    {
-                        page: this.page,
-                    }
+                {
+                    page: this.page,
+                }
             })
-                .then(response => this.bars = response.data);
+            .then(response => this.bars = response.data);
         }
     };
 </script>

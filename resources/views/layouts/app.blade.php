@@ -3,6 +3,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="index,follow">
 	<title>@yield('title')</title>
 	<meta name="description" content="@yield('description')" />
 	<meta name="keywords"  content="@yield('keywords')" />
@@ -68,7 +69,7 @@
 	@if (Identify::os()->getName() == 'Windows' || Identify::os()->getName() == 'OS X' || Identify::os()->getName() == 'Linux')
 	<!-- /*===== fullpage scroll =====*/ -->
 	<script type="text/javascript" src="{{ asset('js/scrolloverflow.js') }}"></script>
-	<!-- <script type="text/javascript" src="{{ asset('js/jquery.easings.min.js') }}"></script> -->
+	<script type="text/javascript" src="{{ asset('js/jquery.fullpage.extensions.min.js') }}"></script>
 	<script type="text/javascript" src="{{ asset('js/jquery.fullpage.js') }}"></script>
 	<script type="text/javascript">
 		$(document).ready(function() {
@@ -80,13 +81,14 @@
 				navigationPosition: 'left',
 				scrollOverflow: true,
 				css3: false,
-				lazyLoading: true,
+				lazyLoading: false,
 				scrollingSpeed: (window.devicePixelRatio <= 1500) ? 1000 : 700,
 				slidesNavigation: true,
 				easing: 'linear',
 				verticalCentered: false,
 				loopHorizontal: true,
 				showActiveTooltip: false,
+				fitToSection: true,
 				navigationTooltips: ["@lang('static.header.navbar.main')", "@lang('static.header.navbar.about')", "@lang('static.header.navbar.speakers')", "@lang('static.header.navbar.bars')", "@lang('static.header.navbar.blog')", "@lang('static.header.navbar.location')", "@lang('static.header.navbar.organisation')", "@lang('static.header.navbar.partner')", "@lang('static.header.navbar.ticket')", "@lang('static.header.navbar.programs')", "@lang('static.header.navbar.contact')"]
 			});
 		});
@@ -101,6 +103,14 @@
 		$(window).load(function() {
 			$(".loader").delay(100).fadeOut("slow");
 		});
+
+		<!-- /*===== timetable overflow =====*/ -->
+		$('.md-close').click(function() {
+			jQuery("iframe").each(function() {
+		        jQuery(this)[0].contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*')
+		    });
+		})
+		
 		<!-- /*===== maskinput =====*/ -->
 		$(function(e) {
 			e(".form-ticket-phone").mask("+99 (999) 999 99 99")
@@ -126,7 +136,8 @@
 					'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
 				},
 				success:function(data){
-					$("#contactformticket").slideUp(), $(".nesto-ticket-response").html("@lang('static.modal_form.success')")
+					window.location.href = "{!! $settings->ticket_url !!}";
+					// $("#contactformticket").slideUp(), $(".nesto-ticket-response").html("@lang('static.modal_form.success')")
 				},
 				error: function(data){
 					$("#contactformticket").slideUp(), $(".nesto-ticket-response").html("Error")
@@ -152,7 +163,8 @@
 					'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
 				},
 				success:function(data){
-					$("#contactformbar").slideUp(), $(".nesto-member-response").html("@lang('static.modal_form.success')")
+					window.location.href = "{!! $settings->ticket_url !!}";
+					// $("#contactformbar").slideUp(), $(".nesto-member-response").html("@lang('static.modal_form.success')")
 				},
 				error: function(data){
 					$("#contactformbar").slideUp(), $(".nesto-member-response").html("Error")
@@ -194,7 +206,7 @@
 			}
 		};
 		@endif
-		timetable.addEvent('{{$program->title}}', '{{$program->scene->title}}', new Date({{\Date::parse($program->day)->format('Y')}},{{\Date::parse($program->day)->format('m')}},{{\Date::parse($program->day)->format('d')}},{{\Date::parse($program->start_date)->format('H')}},{{\Date::parse($program->start_date)->format('i')}}), new Date({{\Date::parse($program->day)->format('Y')}},{{\Date::parse($program->day)->format('m')}},{{\Date::parse($program->day)->format('d')}},{{\Date::parse($program->end_date)->format('H')}},{{\Date::parse($program->end_date)->format('i')}}), options);
+		timetable.addEvent('{!!$program->title!!}', '{{$program->scene->title}}', new Date({{\Date::parse($program->day)->format('Y')}},{{\Date::parse($program->day)->format('m')}},{{\Date::parse($program->day)->format('d')}},{{\Date::parse($program->start_date)->format('H')}},{{\Date::parse($program->start_date)->format('i')}}), new Date({{\Date::parse($program->day)->format('Y')}},{{\Date::parse($program->day)->format('m')}},{{\Date::parse($program->day)->format('d')}},{{\Date::parse($program->end_date)->format('H')}},{{\Date::parse($program->end_date)->format('i')}}), options);
 		@endif
 		@endforeach
 		var renderer = new Timetable.Renderer(timetable);
@@ -212,15 +224,24 @@
 				}
 			}
 		});
-
-		@if (Identify::os()->getName() == 'Windows' || Identify::os()->getName() == 'OS X' || Identify::os()->getName() == 'Linux')
-		@else
-		<!-- /*===== timetable overflow =====*/ -->
-		$( ".timetable section" ).css( "overflow-x", "scroll" );
-		$( ".timetable section" ).css( "-webkit-overflow-scrolling", "touch" );
-		@endif
 	</script>
 	<script type="text/javascript" src="{{ asset('js/classie.js') }}"></script>
 	<script type="text/javascript" src="{{ asset('js/modalEffects.js') }}"></script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRsEXnF7-eUyizn92KP6W_RxfCZ0ZnEmA&callback=initMap"></script>
+	<script type="text/javascript">
+    	function initMap() {
+			var kievCoords = {lat: 50.4490041, lng: 30.5407828};
+			var map = new google.maps.Map(document.getElementById('map'), {
+			    zoom: 17,
+			    center: kievCoords
+			});
+			var marker = new google.maps.Marker({
+			    position: kievCoords,
+			    map: map,
+			    title: 'Место проведения',
+                icon: 'img/location_on-loc-map.svg'
+			});
+		}
+    </script>
 </body>
 </html>

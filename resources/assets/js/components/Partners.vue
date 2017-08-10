@@ -36,14 +36,14 @@
                     axios.get('/partners', {params:{
                         page: --this.page,
                     }})
-                        .then(response => {
-                            this.partners = response.data;
-                            this.visibleRight = true;
-                            if(this.page <= 1)
-                            {
-                                this.visibleLeft = false;
-                            }
-                        });
+                    .then(response => {
+                        this.partners = response.data;
+                        this.visibleRight = true;
+                        if(this.page <= 1)
+                        {
+                            this.visibleLeft = false;
+                        }
+                    });
                 }
                 setTimeout(()=> {this.show = true},500);
             },
@@ -55,14 +55,14 @@
                         page: ++this.page
                     }
                 })
-                    .then(response => {
-                        this.partners = response.data;
-                        this.visibleLeft = true;
-                        if(response.data.length < 10)
-                        {
-                            this.visibleRight = false;
-                        }
-                    });
+                .then(response => {
+                    this.partners = response.data;
+                    this.visibleLeft = true;
+                    if(response.data.length <= 10)
+                    {
+                        this.visibleRight = false;
+                    }
+                });
                 setTimeout(()=> {this.show = true},500);
             },
             loadBottom(){
@@ -74,7 +74,7 @@
                 .then(response => {
                     this.partners = this.partners.concat(response.data);
                     this.visibleLeft = true;
-                    if(response.data.length < 12)
+                    if(response.data.length < 9)
                     {
                         this.visibleRight = false;
                     }
@@ -84,11 +84,11 @@
         created(){
             axios.get('/partners', {
                 params:
-                    {
-                        page: this.page,
-                    }
+                {
+                    page: this.page,
+                }
             })
-                .then(response => this.partners = response.data);
+            .then(response => this.partners = response.data);
         }
     };
 </script>

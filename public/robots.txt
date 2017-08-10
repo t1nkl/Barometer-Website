@@ -1,2 +1,5 @@
 User-agent: *
-Disallow: /
+Disallow: /admin/login
+
+Host:www.barometer.show/ru
+Sitemap: http://barometer.show/sitemap.xml

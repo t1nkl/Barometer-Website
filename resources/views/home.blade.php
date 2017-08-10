@@ -3,13 +3,25 @@
 
 
 @section('title')
-{{$settings->seo_title}}
+	@if($locale == "en")
+		{{$settings->seo_title}}
+	@else
+		{{$settings->seo_title}}
+	@endif
 @endsection
 @section('description')
-{{$settings->seo_description}}
+	@if($locale == "en")
+		{{$settings->seo_description}}
+	@else
+		{{$settings->seo_description}}
+	@endif
 @endsection
 @section('keywords')
-{{$settings->seo_keywords}}
+	@if($locale == "en")
+		{{$settings->seo_keywords}}
+	@else
+		{{$settings->seo_keywords}}
+	@endif
 @endsection
 
 

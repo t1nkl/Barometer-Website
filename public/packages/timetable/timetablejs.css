@@ -54,7 +54,7 @@
 
 .timetable ul {
     list-style-type: none;
-    margin: 0
+    padding: 0 30px;
 }
 
 .timetable aside li,
@@ -64,9 +64,9 @@
 
 .timetable section {
     width: 75%;
-    padding: 0!important;
-    /*overflow-x: scroll;*/
-    /*-webkit-overflow-scrolling: touch*/
+    padding: 30!important;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
 }
 
 .timetable section time {
@@ -95,6 +95,9 @@
     display: inline-block;
     position: relative
 }
+.timetable section header li + li {
+    /* margin-left: 20px; */
+}
 
 .timetable section header li:not(:last-of-type) {
     width: 96px
@@ -103,7 +106,20 @@
 .timetable section header li .time-label {
     display: block;
     position: absolute;
-    left: 0
+    left: 0;
+    z-index: 999;
+}
+.timetable section header li:nth-child(1) .time-label {
+    display: block;
+    position: absolute;
+    left: -30px;
+    z-index: 999;
+}
+.timetable section header li:last-child .time-label {
+    display: block;
+    position: absolute;
+    left: 30px;
+    z-index: 999;
 }
 
 .timetable section header li:not(:first-of-type) .time-label {

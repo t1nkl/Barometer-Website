@@ -22,13 +22,13 @@
 				</li>
 			</ul>
 		</div>
-		<div class="col-md-12 contact-info contact-padding">
+		<div class="col-md-12 contact-info contact-padding" itemscope itemtype="http://schema.org/Organization">
 			<div class="col-md-4 contacts-bar">
 				<div class="icongrafic-bar">
 					<img src="/img/location_on - material copy 2.svg" class="img-fluid" alt="">
 				</div>
-				<div class="contacts-bar-text">
-					<p class="location">{{$settings->place}}, {{$settings->address}}</p>
+				<div class="contacts-bar-text" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+					<p class="location" itemprop="streetAddress">{{$settings->address}}</p>
 				</div>
 			</div>
 			<div class="col-md-4 contacts-bar">
@@ -36,7 +36,7 @@
 					<img src="/img/envelope - FontAwesome.svg" class="img-fluid" alt="">
 				</div>
 				<div class="contacts-bar-text">
-					<p class="location"><a class="location" href="mailto:{{$settings->email}}">{{$settings->email}}</a></p>
+					<p class="location" itemprop="email"><a class="location" href="mailto:{{$settings->email}}">{{$settings->email}}</a></p>
 				</div>
 			</div>
 			<div class="col-md-4 contacts-bar">
@@ -44,26 +44,26 @@
 					<img src="/img/phone - FontAwesome.svg" class="img-fluid" alt="">
 				</div>
 				<div class="contacts-bar-text">
-					<p class="location"><a class="location" href="tel:{{$settings->phone}}">{{$settings->phone}}</a></p>
+					<p class="location" itemprop="telephone"><a class="location" href="tel:{{ str_replace(' ', '', $settings->phone) }}">{{$settings->phone}}</a></p>
 				</div>
 			</div>
 		</div>
 		<div class="col-md-12 contact-navigation">
 			<ul class="navbar-nav footer-last-contact">
 				<li class="nav-item active">
-					<a data-menuanchor="Программа" class="nav-link" href="#Программа">@lang('static.header.navbar.program')</a>
+					<a data-menuanchor="program" class="nav-link" href="#program">@lang('static.header.navbar.program')</a>
 				</li>
 				<li class="nav-item">
-					<a data-menuanchor="Спикеры" class="nav-link" href="#Спикеры">@lang('static.header.navbar.speakers')</a>
+					<a data-menuanchor="speakers" class="nav-link" href="#speakers">@lang('static.header.navbar.speakers')</a>
 				</li>
 				<li class="nav-item">
-					<a data-menuanchor="Партнеры" class="nav-link" href="#Партнеры">@lang('static.header.navbar.partner')</a>
+					<a data-menuanchor="organizers" class="nav-link" href="#organizers">@lang('static.header.navbar.partner')</a>
 				</li>
 				<li class="nav-item">
-					<a data-menuanchor="Бары" class="nav-link" href="#Бары">@lang('static.header.navbar.bars')</a>
+					<a data-menuanchor="bars" class="nav-link" href="#bars">@lang('static.header.navbar.bars')</a>
 				</li>
 				<li class="nav-item">
-					<a data-menuanchor="Блог" class="nav-link" href="#Блог">@lang('static.header.navbar.blog')</a>
+					<a data-menuanchor="blog" class="nav-link" href="#blog">@lang('static.header.navbar.blog')</a>
 				</li>
 			</ul>
 
@@ -81,8 +81,4 @@
 		<span class="bilettext">@lang('static.header.buy_ticket')</span>
 			</a> -->
 	</div>
-	
-	<!-- <p class="copyright-text">
-		Made with <span style="color:#ed2f33">♥</span> by <a href="https://leodigital.com.ua" target="_blank" style="color:#C4D468">LeoDigital</a>
-	</p> -->
 </div>

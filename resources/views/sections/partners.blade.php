@@ -12,19 +12,19 @@
 		<div class="col-md-3 partners-block">
 			<div class="partners-logo"><img src="{{$mainpartner->image}}" class="img-fluid" alt=""></div>
 			<h4>{{$mainpartner->title}}</h4>
-			<p class="partners-txt" style="text-align:justify">{{$mainpartner->content}}</p>
+			<p class="partners-txt" >{{$mainpartner->content}}</p>
 		</div>
 		@endforeach
 	</div>
 	<a href="#" class="buybuttonMain md-trigger" data-modal="modal-buy-ticket">
-		<!-- <div class="circle-pop"></div> -->
 		<span class="bilettext">@lang('static.header.buy_ticket')</span>
 	</a>
 </div>
+
 <!-- Partners -->
 <div class="section row speakers-section" id="section7">
-	<div class="col-md-12 starter-section">
-		<div class="col-md-12">
+	<div class="col-md-12 starter-section fatBlock">
+		<div class="col-md-12 ">
 			@if($locale == 'ru')
 				<img src="/img/headers/partn.svg" class="img-headers" alt="">
 			@else
@@ -34,10 +34,8 @@
 				<partners></partners>
 			</div>
 		</div>
-		<a href="#" class="buybuttonMain md-trigger" data-modal="modal-buy-ticket">
-		<!-- <div class="circle-pop"></div> -->
-		<span class="bilettext">@lang('static.header.buy_ticket')</span>
-	</a>
+		<!-- <a href="#" class="buybuttonMain md-trigger" data-modal="modal-buy-ticket">
+			<span class="bilettext">@lang('static.header.buy_ticket')</span>
+		</a> -->
 	</div>
-	
 </div>

@@ -18,7 +18,7 @@
 					<img src="/img/location_on-loc.svg" class="img-fluid" alt="">
 				</div>
 				<div class="contact-txt">
-					<p class="location">{{$settings->place}}, {{$settings->address}}</p>
+					<p class="location">{{$settings->address}}</p>
 				</div>
 			</div>
 			<div class="contact-bl">
@@ -40,23 +40,9 @@
 		</div>
 		<div class="col-md-6 contact-illustration">
             
-            <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRsEXnF7-eUyizn92KP6W_RxfCZ0ZnEmA&callback=initMap"></script>
+            
             <div id="map"></div>
-            <script type="text/javascript">
-            	function initMap() {
-					var kievCoords = {lat: 50.4490041, lng: 30.5407828};
-					var map = new google.maps.Map(document.getElementById('map'), {
-					    zoom: 17,
-					    center: kievCoords
-					});
-					var marker = new google.maps.Marker({
-					    position: kievCoords,
-					    map: map,
-					    title: 'Место проведения',
-                        icon: 'img/location_on-loc-map.svg'
-					});
-				}
-            </script>
+            
                     
 			<!-- <img src="{{$settings->location_image}}" class="img-fluid" alt=""> -->
 		</div>

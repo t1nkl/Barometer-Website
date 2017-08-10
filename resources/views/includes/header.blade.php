@@ -101,7 +101,7 @@
 		<div class="md-modal md-effect-1" id="modal-video">
 			<div class="md-content watchvideo-modal">
 				<div class="col-md-12 watchvideo-block">
-					<iframe width="100%" height="600px" src="{{$settings->youtube_url}}" frameborder="0" allowfullscreen></iframe>
+					<iframe id="modal-video-delete"  type="text/html" width="100%" height="600px" src="{{$settings->youtube_url}}" frameborder="0" allowfullscreen></iframe>
 					<button class="md-close"></button>
 				</div>
 			</div>

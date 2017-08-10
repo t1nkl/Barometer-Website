@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<url><loc>	http://barometer.show/ru	</loc>
+    <lastmod>2016-10-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+<url><loc>	http://barometer.show/ru/blog	</loc>
+    <lastmod>2016-10-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+<url><loc>	http://barometer.show/ru/blog/lyuk-vearti-operation-dagger-singapur	</loc>
+    <lastmod>2016-10-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+<url><loc>	http://barometer.show/en	</loc>
+    <lastmod>2016-10-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+<url><loc>	http://2016.barometer.show/	</loc>
+    <lastmod>2016-10-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+<url><loc>	http://barometer.show/en/blog	</loc>
+    <lastmod>2016-10-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+<url><loc>	http://barometer.show/en/blog/lyuk-vearti-operation-dagger-singapur	</loc>
+    <lastmod>2016-10-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+<url><loc>	http://2016.barometer.show/contact-page/	</loc>
+    <lastmod>2016-10-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+</urlset>
