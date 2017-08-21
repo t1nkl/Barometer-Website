@@ -58,7 +58,7 @@
                 .then(response => {
                     this.bars = response.data;
                     this.visibleLeft = true;
-                    if(response.data.length <= 10)
+                    if(response.data.length < 10)
                     {
                         this.visibleRight = false;
                     }

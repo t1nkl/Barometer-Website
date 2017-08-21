@@ -6,7 +6,7 @@ var ModalEffects = (function() {
 
 		[].slice.call( document.querySelectorAll( '.md-trigger' ) ).forEach( function( el, i ) {
 
-			// console.log(el.getAttribute( 'data-modal' ));
+			 //console.log(el.getAttribute( 'data-modal' ));
 
 			if( el.getAttribute( 'data-modal' ) == null ) {
 

@@ -200,6 +200,8 @@
 .buy-ticket-section-modal {
 	display: flex;
 	justify-content: center;
+	-webkit-transform: translate3d(0,0,6px);
+	transform: translate3d(0,0,6spx);
 }
 .buy-ticket-modal {
 	min-width: 420px;
@@ -210,6 +212,7 @@
 .buy-ticket-block {
 	background-color: #fff;
 	padding: 50px;
+	z-index: 999;
 }
 .form-buy-ticket {
 	display: flex;
@@ -237,6 +240,7 @@
 	color: #000;
 	font-size: 16px;
 	font-weight: lighter;
+	line-height: 1px;
 }
 .inputText::-webkit-input-placeholder {
 	font-style: italic;

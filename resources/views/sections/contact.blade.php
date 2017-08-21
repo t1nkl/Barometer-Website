@@ -68,17 +68,6 @@
 			</ul>
 
 		</div>
-		<div class="site-info__colormelon">
-				Made with
-				<span>♥</span> 
-				by 
-				<a href="https://leodigital.com.ua" target="_blank">
-					LeoDigital
-				</a>
-			</div>
-		<!-- <a href="#" class="buybuttonMain md-trigger" data-modal="modal-buy-ticket">
-		<div class="circle-pop"></div>
-		<span class="bilettext">@lang('static.header.buy_ticket')</span>
-			</a> -->
+		
 	</div>
 </div>

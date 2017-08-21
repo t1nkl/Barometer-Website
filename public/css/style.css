@@ -300,6 +300,7 @@ h1 {
    -moz-transition: all ease-in-out 200ms;
    -webkit-transition: all ease-in-out 200ms;
    transition: all ease-in-out 200ms;
+   z-index: 1;s
 }
 .buy-ticket:hover {
 	cursor:pointer;
@@ -350,7 +351,7 @@ h1 {
     font-size: 24px;
     background: #E0DA00;
     border: none;
-    color: #3a3a3a;
+    color: #3a3a3a !important;
     text-transform: uppercase;
     font-weight: bold;
    -o-transition: all ease-in-out 200ms;
@@ -598,7 +599,7 @@ h1 {
    flex-direction: row;
    justify-content: space-around;
    padding-left: 4rem;
-   padding-right: 2rem;
+   /* padding-right: 2rem; */
    /* padding-bottom: 5rem; */
    padding-top:1rem;
 }
@@ -1318,7 +1319,7 @@ h1 {
    justify-content: center;
 }
 .partners-all > div {
-   margin:20px 0;
+   margin-bottom: 20px;
 }
 .fp-controlArrow.fp-prev {
    left: 50px;
@@ -1503,6 +1504,8 @@ a.buy-ticket {
    text-align: center;
    color:#fff !important;
    padding-top:1.3rem;
+   -webkit-transform: translate3d(0,0,0px);
+    transform: translate3d(0,0,0px);
 }
 a.buy-ticket:hover {
    color:#fff !important;
@@ -2655,6 +2658,9 @@ nav a.prev {
    }
 }
 @media screen and (min-width:426px) and (max-width:767px){
+	.buybuttonMain {
+		position: relative !important;
+	}
   .header-timing {
     font-size: 30px;
   }
@@ -2735,7 +2741,7 @@ nav a.prev {
     }
     .bars-item {
         width: 48%;
-        margin: 1%;
+        margin: 0px 1%;
     }
    #section0 {
       background-color:#0ff;
@@ -3004,7 +3010,7 @@ nav a.prev {
    .speakers-items {
       padding-left: 2rem;
       padding-right: 2rem;
-      padding-bottom: 5rem;
+      /* padding-bottom: 5rem; */
       padding-top: 1rem;
    }
    .navbar-social-modal {
@@ -3200,7 +3206,7 @@ nav a.prev {
    }
    .speakers-item {
       width: 31%;
-      margin: 1%;
+      margin: 5px 1%;
    }
    .logo-wrapper {
       padding-top: 1.5rem;
@@ -3221,7 +3227,13 @@ nav a.prev {
 }
 
 @media screen and (min-width:320px) and (max-width:425px){
-
+	#section7 .buybuttonMain {
+		position: relative;
+	}
+	.buybuttonMain {
+		z-index: 10;
+		margin: 0px auto 30px auto !important;
+	}
     .scrollTopBut a {
       display: none !important;
     }
@@ -3277,6 +3289,7 @@ nav a.prev {
         justify-content: center;
         width: 100%;
         margin: 1rem 0;
+        cursor: pointer;
     }
     .load-more-section>a {
         color:#fff !important;
@@ -3319,7 +3332,7 @@ nav a.prev {
     }
     .bars-item {
         width: 48%;
-        margin: 1%;
+        margin: 0 1%;
     }
    #section0 {
       background-color:#0ff;
@@ -3440,7 +3453,7 @@ nav a.prev {
    }
    .speakers-item {
       width: 48%;
-      margin: 1%;
+      margin: 5px 1%;
    }
    .partners-block {
       margin: 1rem 0;
@@ -3578,6 +3591,7 @@ nav a.prev {
       display: flex;
       padding-top: 30px;
       padding-right: 0;
+      padding-left: 0;
    }
    .buy-ticket {
       width: 288px;
@@ -3609,8 +3623,11 @@ nav a.prev {
    .button-starter {
       width: 50%;
    }
+   .button-starter-bary,
+   .button-starter-speaker,
    .button-starter-blog {
-      width: 50%;
+      /* width: 50%; */
+      width: 350px !important;
    }
    .header-timing-h2 {
       color: #fff;
@@ -4279,12 +4296,24 @@ nav a.prev {
 	display: flex;
 	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
-	-ms-flex-direction: column;
-	    flex-direction: column;
+/* 	-ms-flex-direction: column;
+    flex-direction: column; */
 	width: 100%;
 }
 
 .fatBlock .img-headers {
 	-ms-flex-item-align: left;
 	align-self: left;
+}
+.fatBlock .buybuttonMain {
+	/* margin-left: -320px; */
+}
+.partnersButton {
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+}
+#section7 .buybuttonMain,
+#section6 .buybuttonMain {
+	margin-right: 85px;
 }
